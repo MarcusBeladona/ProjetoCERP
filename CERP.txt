@@ -1,0 +1,7 @@
+Atlas:
+    projetoCERP
+    Utw8ufjB6l8Kp1SU
+
+Admin:
+    marcus@mail.com
+    123
