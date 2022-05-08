@@ -1,0 +1,31 @@
+_id: req_5bee845ef2474ed1891dc51481fddfcb
+type: Request
+parentId: fld_c2d270a01a2d495b9bcd6625004037f6
+modified: 1652046477179
+created: 1652045794991
+url: localhost:3000/admins
+name: Admin
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nome": "Marcus",
+    	"email": "marcus@mail.com",
+    	"senha": "123"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_cca67fc02cd14b498ec04b07d8950303
+authentication: {}
+metaSortKey: -1651980310131.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
