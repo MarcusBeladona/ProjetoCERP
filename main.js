@@ -8,5 +8,6 @@ app.listen(3000, function () {
 
 // MongoDB
 db.setup(
-	"mongodb+srv://projetoCERP:Utw8ufjB6l8Kp1SU@projetocerp.1pv8p.mongodb.net/ProjetoCERP?retryWrites=true&w=majority"
+	"mongodb+srv://projetoCERP:Utw8ufjB6l8Kp1SU@projetocerp.1pv8p.mongodb.net" +
+		"/ProjetoCERP?retryWrites=true&w=majority"
 );
