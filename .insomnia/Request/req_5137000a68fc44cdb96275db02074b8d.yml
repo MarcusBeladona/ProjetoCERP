@@ -1,0 +1,30 @@
+_id: req_5137000a68fc44cdb96275db02074b8d
+type: Request
+parentId: fld_c2d270a01a2d495b9bcd6625004037f6
+modified: 1652046206406
+created: 1652045747800
+url: localhost:3000/admins/signin
+name: SignIn
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email":"marcus@mail.com",
+    	"senha":"123"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_4843c6079f124e8db6ac7fd7953b4cb4
+authentication: {}
+metaSortKey: -1652045743324
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

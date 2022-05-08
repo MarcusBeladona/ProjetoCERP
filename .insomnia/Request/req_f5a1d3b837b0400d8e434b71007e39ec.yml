@@ -1,0 +1,25 @@
+_id: req_f5a1d3b837b0400d8e434b71007e39ec
+type: Request
+parentId: fld_c2d270a01a2d495b9bcd6625004037f6
+modified: 1652046050878
+created: 1652045743274
+url: localhost:3000/admins
+name: Admin
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - id: pair_2e6a094add3b4929b91400039be3a217
+    name: token
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoiNjI3ODM4ODcxZWQ1ZWY5NDFlMTM5YjdiIiwibm9tZSI6Ik1hcmN1cyIsImVtYWlsIjoibWFyY3VzQG1haWwuY29tIiwiaWF0IjoxNjUyMDQ2MDEwfQ.II7fFHDqZfXRd5xQJlmrw_JrWa--V_bXJh1-uLXwF3E
+    description: ""
+authentication: {}
+metaSortKey: -1652045743274
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
