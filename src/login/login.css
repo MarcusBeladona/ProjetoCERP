@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*tem que importar aqui a fonte montserrat */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.container .logo {
+    width: 70%;
+    height: 100vh;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .logo .img {
+    width: 250px;
+}
+
+.container .login {
+    width: 50%;
+    height: 100vh;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .login .retangulo {
+    width: 378px;
+    height: 290px;
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container .login .retangulo .texto {
+    margin-bottom: 20px;
+}
+
+.container .login .retangulo .input {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .login .retangulo .input .input-caixa {
+    width: 378px;
+    height: 55px;
+    background-color: black;
+    margin-top: 3px;
+
+}
+
+.container .login .retangulo .footer {
+    background-color: #F3F3F3;
+    bottom: 0;
+    height: 55px;
+    width: 378px;
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    align-items:flex-end;
+}
+
+.container .login .retangulo .footer .botao-entrar {
+    background: #F9BC2A;
+    border-radius: 5px;
+    border: none;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    color: #212121;
+    font-weight:600;
+}
+
+.container .login .retangulo .input .usuario, .senha {
+    background: #FFFFFF;
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+    width: 100%;
+    height:38px;
+}
+
+.container .login .retangulo .input .h5 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
