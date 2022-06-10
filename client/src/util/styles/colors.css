@@ -1,0 +1,21 @@
+/* Todas as cores. */
+
+.c-primary {
+	background-color: #f9bc2a;
+}
+
+.c-warning {
+	background-color: #ca1313;
+}
+
+.c-success {
+	background-color: #108b1c;
+}
+
+.c-neutral-200 {
+	background-color: #f4f4f4;
+}
+
+.c-neutral-900 {
+	background-color: #212121;
+}

@@ -1,0 +1,31 @@
+/* Todos os textos. */
+
+h1 {
+	font-size: 32px;
+	line-height: 40px;
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 32px;
+}
+
+h3 {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.t-title {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.t-body {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.t-caption {
+	font-size: 12px;
+	line-height: 16px;
+}

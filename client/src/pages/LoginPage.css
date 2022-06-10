@@ -1,0 +1,46 @@
+.LoginPage {
+	height: 100vh;
+	display: flex;
+}
+
+.LoginPage .logo-amarelo {
+	height: min-content;
+	display: block;
+	width: 250px;
+}
+
+.LoginPage .left-area {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-grow: 2;
+}
+
+.LoginPage .right-area {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-grow: 1;
+}
+
+.LoginPage .right-area .loginForm {
+	flex-direction: column;
+	display: flex;
+	gap: 16px;
+}
+
+.LoginPage .right-area header {
+	flex-direction: column;
+	display: flex;
+	gap: 4px;
+}
+
+.LoginPage .right-area form {
+	flex-direction: column;
+	display: flex;
+	gap: 4px;
+}
+
+.LoginPage .right-area button {
+	align-self: flex-end;
+}
