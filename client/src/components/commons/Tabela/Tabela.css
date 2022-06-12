@@ -1,0 +1,48 @@
+.tabela{
+    width: 950px;
+    border-radius: 5;
+    scroll-behavior: none;
+}
+
+th, td{
+    height: 60px;
+    padding: 15px;
+    align-items: center;
+}
+
+tr:hover{
+    background-color: #f5f5f5;
+}
+
+tr:nth-child(even){
+    background-color: #f5f5f5;
+}
+
+.body-tabela .inicio-tabela .botoes .botao{
+    margin: 5px;
+}
+
+.body-tabela .inicio-tabela .objetivo .card-objetivo{
+    box-sizing: border-box;
+    align-items: center;
+    gap: 10px;
+    height: 28px;
+    background-color: rgba(15, 170, 30, 0.25);
+    border: 1px solid #0FAA1E;
+    border-radius: 5px;
+
+
+}
+
+
+.body-tabela .inicio-tabela .horario .card-horario{
+    box-sizing: border-box;
+    align-items: center;
+    gap: 10px;
+    height: 28px;
+    background-color: rgba(249, 188, 42, 0.25);
+    border: 1px solid #f9bc2a;
+    border-radius: 5px;
+
+
+}

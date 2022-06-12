@@ -1,0 +1,56 @@
+
+.nav-superior{
+    position: relative;
+    height: 100px;
+    background-color: #212121;
+    display: flex;    
+    justify-content: right;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.nav-superior a{
+    display: block;
+    color: #f9bc2a;
+    margin: 20px;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+.nav-superior a:hover{
+    background-color: #353535;
+}
+
+
+/*----------------*/
+
+.container-1{
+    display: flex;
+
+}
+
+.container-1 .nav-esquerdo{
+    z-index: 1;
+    flex-basis: 255px;
+    flex-shrink: 0;
+    height: 800px;
+    background-color: #212121;
+
+
+}
+
+.container-1 .nav-esquerdo a{
+    display: block;
+    color: #f9bc2a;
+    padding: 20px;
+    text-decoration: none;
+
+}
+
+.container-1 .nav-esquerdo a:hover{
+    background-color: #353535;
+
+}
+
