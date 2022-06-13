@@ -1,5 +1,5 @@
-import { Alert } from "../components/Alert";
-import logo from "../util/logo-amarelo.png";
+import { Alert } from "../Alert";
+import logo from "../../util/logo-amarelo.png";
 import "./LoginPage.css";
 
 export function LoginPage() {
