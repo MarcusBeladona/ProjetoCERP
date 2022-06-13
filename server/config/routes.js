@@ -16,7 +16,7 @@ router.get("/admins/:id", adminController.getAdminById);
 router.delete("/admins/:id", adminController.deleteAdmin);
 
 // Aluno
-router.post("/alunos", alunoController);
+router.post("/alunos", alunoController.postAluno);
 router.get("/alunos/:id", alunoController.getAlunoById);
 router.get("/alunos", alunoController.getAluno);
 
