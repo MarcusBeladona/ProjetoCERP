@@ -30,7 +30,7 @@ getAlunoById = (req, res) => {
     .catch((e) => res.status(404).send(e));
 };
 
-getAluno = (req, res) => {
+getAlunos = (req, res) => {
   alunoModel
     .find()
     .exec()
@@ -38,8 +38,27 @@ getAluno = (req, res) => {
     .catch((e) => res.status(500).send(e));
 };
 
+putEditAluno = (req, res) => {
+  alunoModel 
+    .findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .exec()
+    .then((a) => res.status(200).json(alunoView.render(a)))
+    .catch((e) => res.status(404).send(e));
+}
+
+deleteAluno = (req, res) => {
+  alunoModel
+    .findByIdAndDelete(req.params.id)
+    .exec()
+    .then((a) => res.status(200).json("Aluno deletado com sucesso!"))
+    .catch((e) => res.status(400).send(e));
+}
+
+
 module.exports = {
   postAluno,
   getAlunoById,
-  getAluno,
+  getAlunos,
+  putEditAluno, 
+  deleteAluno
 };
