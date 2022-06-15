@@ -16,8 +16,11 @@ router.get("/admins/:id", adminController.getAdminById);
 router.delete("/admins/:id", adminController.deleteAdmin);
 
 // Aluno
-router.post("/alunos", alunoController);
+router.use("/alunos", authController.check);
+router.post("/alunos", alunoController.postAluno);
 router.get("/alunos/:id", alunoController.getAlunoById);
-router.get("/alunos", alunoController.getAluno);
+router.get("/alunos", alunoController.getAlunos);
+router.put("/alunos/:id", alunoController.putEditAluno);
+router.delete("/alunos/:id", alunoController.deleteAluno);
 
 module.exports = router;

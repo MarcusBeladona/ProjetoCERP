@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const alunoSchema = new mongoose.Schema({
   id: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
   },
   nome: {
     type: String,
@@ -53,7 +52,7 @@ const alunoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  horaio: {
+  horario: {
     type: String,
     required: true,
   },
