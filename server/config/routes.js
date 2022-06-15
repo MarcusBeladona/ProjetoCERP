@@ -4,6 +4,7 @@ const router = express.Router();
 const adminController = require("../src/controller/adminController");
 const authController = require("../src/controller/authController");
 const alunoController = require("../src/controller/alunoController");
+const avaliacaoController = require("../src/controller/avaliacaoController");
 
 // Auth
 router.post("/admins", adminController.postAdmin);
@@ -22,5 +23,8 @@ router.get("/alunos/:id", alunoController.getAlunoById);
 router.get("/alunos", alunoController.getAlunos);
 router.put("/alunos/:id", alunoController.putEditAluno);
 router.delete("/alunos/:id", alunoController.deleteAluno);
+
+// Avaliacao
+router.post("/avaliacao", avaliacaoController.postAvaliacao);
 
 module.exports = router;
