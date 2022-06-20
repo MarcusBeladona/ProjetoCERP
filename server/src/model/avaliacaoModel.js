@@ -24,7 +24,7 @@ const avaliacaoSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  cinturaoescapular: {
+  cinturao_escapular: {
     type: Number,
     required: true,
   },
@@ -40,11 +40,11 @@ const avaliacaoSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  bracorelaxado: {
+  braco_relaxado: {
     type: Number,
     required: true,
   },
-  bracocontraido: {
+  braco_contraido: {
     type: Number,
     required: true,
   },
@@ -52,15 +52,15 @@ const avaliacaoSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  quadricepsproximal: {
+  quadriceps_proximal: {
     type: Number,
     required: true,
   },
-  quadricepsmedial: {
+  quadriceps_medial: {
     type: Number,
     required: true,
   },
-  quadricepsdistal: {
+  quadriceps_distal: {
     //boto quadriceps_distal ou quadricepsDistal? vale pros outros que são duas palavras tbm
     type: Number,
     required: true,
