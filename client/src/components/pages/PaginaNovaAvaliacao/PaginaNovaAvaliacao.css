@@ -1,0 +1,27 @@
+.pagina-v{
+    display: block;
+}
+
+.pagina-v .conteudo{
+    display: flex;
+	height: 100vh;
+	width: 100vw;
+    
+}
+
+.pagina-v .conteudo .boox-v{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.pagina-v .conteudo .boxavaliacao{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 50px
+}
+
