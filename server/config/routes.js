@@ -25,6 +25,8 @@ router.put("/alunos/:id", alunoController.putEditAluno);
 router.delete("/alunos/:id", alunoController.deleteAluno);
 
 // Avaliacao
+router.use("/avaliacao", authController.check);
 router.post("/avaliacao", avaliacaoController.postAvaliacao);
+router.get("/avaliacao/:id", avaliacaoController.listarAvaliacoes);
 
 module.exports = router;
