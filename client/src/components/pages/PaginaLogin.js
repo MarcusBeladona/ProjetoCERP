@@ -5,6 +5,7 @@ import "./PaginaLogin.css";
 
 import { useContext } from "react";
 import { AuthContext } from "../../App.js";
+import { axiosSign } from "../../api/Request";
 
 export function PaginaLogin() {
 	const { register, handleSubmit } = useForm();
@@ -12,15 +13,12 @@ export function PaginaLogin() {
 	const navigate = useNavigate();
 
 	function enviarDados(dados) {
-		console.log(dados);
-		/* signin(dados)
+		axiosSign(dados)
 			.then(res => {
 				user.setToken({ token: res.data.token, nome: res.data.nome });
-				navigate("/");
+				navigate("/visualizar");
 			})
-			.catch(e => {
-				alert("Oops! Confira se todos os dados estão corretos.");
-			}); */
+			.catch(e => alert(e));
 	}
 
 	return (
