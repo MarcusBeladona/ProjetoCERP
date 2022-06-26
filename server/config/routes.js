@@ -10,6 +10,8 @@ const avaliacaoController = require("../src/controller/avaliacaoController");
 router.post("/admins", adminController.postAdmin);
 router.post("/admins/signin", authController.sign);
 router.use("/admins", authController.check);
+router.use("/alunos", authController.check);
+router.use("/avaliacao", authController.check);
 
 // Admin
 router.get("/admins", adminController.getAdmin);
@@ -17,7 +19,6 @@ router.get("/admins/:id", adminController.getAdminById);
 router.delete("/admins/:id", adminController.deleteAdmin);
 
 // Aluno
-router.use("/alunos", authController.check);
 router.post("/alunos", alunoController.postAluno);
 router.get("/alunos/:id", alunoController.getAlunoById);
 router.get("/alunos", alunoController.getAlunos);
@@ -25,7 +26,6 @@ router.put("/alunos/:id", alunoController.putEditAluno);
 router.delete("/alunos/:id", alunoController.deleteAluno);
 
 // Avaliacao
-router.use("/avaliacao", authController.check);
 router.post("/avaliacao", avaliacaoController.postAvaliacao);
 router.get("/avaliacao/:id", avaliacaoController.listarAvaliacoes);
 

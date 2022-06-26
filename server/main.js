@@ -2,8 +2,8 @@ const app = require("./config/express");
 const db = require("./config/mongoose");
 
 // Express
-app.listen(3000, function () {
-	console.log("Express online: localhost:3000");
+app.listen(3010, function () {
+	console.log("Express online: localhost:3010");
 });
 
 // MongoDB

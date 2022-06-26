@@ -7,7 +7,7 @@ export function Navbar() {
 	let nome = "Hermes";
 	return (
 		<div>
-			<nav class="nav-superior">
+			<nav className="nav-superior">
 				<a href=".">Olá, {nome}</a>
 				<a href=".">Sair</a>
 			</nav>
