@@ -1,12 +1,12 @@
 import "./Box_08.css"
 import React from "react"
 import { Button } from 'reactstrap';
-import { JSX } from "react";
+// import { JSX } from "react";
 import { FichaEditar } from "../FichaEditar/FichaEditar";
 
 
 export function Box08(){
-    let nome = "Hermes";
+    // let nome = "Hermes";
     return(
         
         <div className="box_02">

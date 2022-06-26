@@ -6,7 +6,7 @@ import { TabelaAvaliacao } from "../TabelaAvaliacao/TabelaAvaliacao";
 
 
 export function Box04(){
-    let nome = "Hermes";
+    // let nome = "Hermes";
     return(
         
         <div className="box_02">

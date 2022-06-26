@@ -6,7 +6,7 @@ import { FormularioBloc } from "../FormularioBloc/FormularioBloc";
 
 
 export function Box03(){
-    let nome = "Hermes";
+    // let nome = "Hermes";
     return(
         
         <div className="conteudobox_03">

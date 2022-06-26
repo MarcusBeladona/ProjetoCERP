@@ -1,13 +1,13 @@
 import "./Box05.css"
 import React from "react"
 import { Button } from 'reactstrap';
-import { TabelaAvaliacao } from "../TabelaAvaliacao/TabelaAvaliacao";
+// import { TabelaAvaliacao } from "../TabelaAvaliacao/TabelaAvaliacao";
 import { FichaAvaliacao } from "../Ficha/Ficha";
 
 
 
 export function Box05(){
-    let nome = "Hermes";
+    // let nome = "Hermes";
     return(
         <div className="box_05">
                 <div className="topo_box">

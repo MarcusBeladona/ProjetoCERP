@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 import { FichaAvaliacaoDisable } from "../FichaDisable/FichaDisable";
 
 export function Box06(){
-    let nome = "Hermes";
+    // let nome = "Hermes";
     return(
         <div className="box_05">
                 <div className="topo_box">

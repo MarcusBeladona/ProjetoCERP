@@ -1,6 +1,6 @@
-import { Box05 } from "../../components/commons/Box_05/Box05";
-import { Navbar } from "../../components/commons/Navbar/Navbar";
-import { NavbarLateral } from "../../components/commons/NavbarLateral/NavbarLateral";
+import { Box05 } from "../../commons/Box_05/Box05";
+import { Navbar } from "../../commons/Navbar/Navbar";
+import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
 import "./PaginaNovaAvaliacao.css"
 
 export function PaginaNovaAvaliacao(){
