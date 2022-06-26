@@ -10,21 +10,22 @@ export function PaginaInicial() {
 	const user = useContext(AuthContext);
 	const navigate = useNavigate();
 
-	if (user.tokenBody.token === "null") {
-		alert("É necessário entrar na sua conta.");
-		navigate("/login");
-	} else {
-		return (
-			<div className="pagina">
-				<Navbar></Navbar>
-				<div className="conteudo">
-					<NavbarLateral></NavbarLateral>
-					<div className="boox">
-						<Box></Box>
-					</div>
+	useEffect(() => {
+		if (user.tokenBody.token === "null") {
+			alert("É necessário entrar na sua conta.");
+			navigate("/login");
+		}
+	}, [user.tokenBody.token, navigate]);
+
+	return (
+		<div className="pagina">
+			<Navbar></Navbar>
+			<div className="conteudo">
+				<NavbarLateral></NavbarLateral>
+				<div className="boox">
+					<Box></Box>
 				</div>
 			</div>
-		);
-	}
-
+		</div>
+	);
 }

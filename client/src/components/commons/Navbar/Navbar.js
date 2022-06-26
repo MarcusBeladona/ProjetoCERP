@@ -1,20 +1,3 @@
-/* import "./Navbar.css";
-import React from "react";
-//import { Button } from "reactstrap"
-//import { Box } from "../Box/Box";
-
-export function Navbar() {
-	let nome = "Hermes";
-	return (
-		<div>
-			<nav className="nav-superior">
-				<a href=".">Olá, {nome}</a>
-				<a href=".">Sair</a>
-			</nav>
-		</div>
-	);
-} */
-
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 

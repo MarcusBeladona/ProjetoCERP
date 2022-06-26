@@ -15,6 +15,7 @@ export function PaginaLogin() {
 	function enviarDados(dados) {
 		axiosSign(dados)
 			.then(res => {
+				console.log(res);
 				user.setToken({ token: res.data.token, nome: res.data.nome });
 				navigate("/visualizar");
 			})
@@ -38,7 +39,7 @@ export function PaginaLogin() {
 						<input {...register("email")} type="email" placeholder="E-mail" />
 						<p className="t-body">Senha</p>
 						<input {...register("senha")} type="password" placeholder="Senha" />
-						<button className="button-primary" type="Submit">
+						<button className="button-primary" type="submit">
 							Entrar
 						</button>
 					</form>
