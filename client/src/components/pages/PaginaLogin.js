@@ -12,6 +12,7 @@ export function PaginaLogin() {
 	const navigate = useNavigate();
 
 	function enviarDados(dados) {
+		console.log(dados);
 		/* signin(dados)
 			.then(res => {
 				user.setToken({ token: res.data.token, nome: res.data.nome });
@@ -34,11 +35,11 @@ export function PaginaLogin() {
 						<h1>Primeiro Acesso</h1>
 						<p className="t-title">Coloque seu usuário e sua senha nos campos abaixo:</p>
 					</header>
-					<form>
-						<p className="t-body">Usuário</p>
-						<input type="text" placeholder="Usuário" />
+					<form onSubmit={handleSubmit(enviarDados)}>
+						<p className="t-body">E-Mail</p>
+						<input {...register("email")} type="email" placeholder="E-mail" />
 						<p className="t-body">Senha</p>
-						<input type="password" placeholder="Senha" />
+						<input {...register("senha")} type="password" placeholder="Senha" />
 						<button className="button-primary" type="Submit">
 							Entrar
 						</button>

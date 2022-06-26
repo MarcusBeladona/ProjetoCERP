@@ -1,7 +1,10 @@
 import "./Tabela.css";
 import { Button } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 
 export function Tabela() {
+	const navigate = useNavigate();
+
 	return (
 		<div>
 			<table className="tabela">
@@ -28,7 +31,14 @@ export function Tabela() {
 							<div className="card-horario">18:00</div>
 						</td>
 						<td className="botoes">
-							<Button outline color="primary" className="botao">
+							<Button
+								outline
+								color="primary"
+								className="botao"
+								onClick={() => {
+									navigate("/visualizar");
+								}}
+							>
 								Visualizar
 							</Button>
 							<Button outline color="warning" className="botao">
