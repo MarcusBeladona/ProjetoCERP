@@ -1,23 +1,24 @@
-import { Box05 } from "../../commons/Box_05/Box05";
+/*
+import { Box06 } from "../../commons/Box_06/Box06";
 import { Navbar } from "../../commons/Navbar/Navbar";
 import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
-import "./PaginaNovaAvaliacao.css"
+import "./PaginaVisualizarAvaliacao.css"
 
-export function PaginaNovaAvaliacao(){
+export function PaginaVisualizarAvaliacao(){
     return(
 
     <div className="pagina-v">
 
         <Navbar></Navbar>
-        
+
         <div className="conteudo">
             <NavbarLateral></NavbarLateral>
             <div className="boxavaliacao">
-                <Box05></Box05>
+                <Box06></Box06>
             </div>
         </div>
     </div>
 
     );
 
-};
+}; */

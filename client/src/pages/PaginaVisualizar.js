@@ -1,4 +1,4 @@
-import "./PaginaVisualizar.css"
+/* import "./PaginaVisualizar.css"
 import { Navbar } from "../../commons/Navbar/Navbar";
 import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
 import { Box03 } from "../../commons/Box_03/Box03";
@@ -11,7 +11,7 @@ export function PaginaVisualizar(){
         <div className="pagina-v">
 
             <Navbar></Navbar>
-            
+
             <div className="conteudo">
                 <NavbarLateral></NavbarLateral>
                 <div className="boox-v">
@@ -29,3 +29,4 @@ export function PaginaVisualizar(){
 
 }
 
+ */

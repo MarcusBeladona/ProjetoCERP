@@ -1,10 +1,13 @@
-import "./PaginaInicial.css";
-import { Navbar } from "../../commons/Navbar/Navbar";
-import { Box } from "../../commons/Box/Box";
-import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
+// Sistema
 import { useContext, useEffect } from "react";
-import { AuthContext } from "../../../App";
 import { useNavigate } from "react-router-dom";
+
+// Componentes
+import { Navbar } from "../../commons/Navbar/Navbar";
+
+import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
+import { Box } from "../components/Box/Box";
+import { AuthContext } from "../App";
 
 export function PaginaInicial() {
 	const user = useContext(AuthContext);
@@ -18,7 +21,7 @@ export function PaginaInicial() {
 	}, [user.tokenBody.token, navigate]);
 
 	return (
-		<div className="pagina">
+		<div className="PaginaIncial">
 			<Navbar></Navbar>
 			<div className="conteudo">
 				<NavbarLateral></NavbarLateral>

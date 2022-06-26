@@ -1,21 +1,20 @@
-import "./PaginaEditarAluno.css";
+/* import "./PaginaCadastro.css";
 import { Navbar } from "../../commons/Navbar/Navbar";
 import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
-import { Box07 } from "../../commons/Box_07/Box_07";
-import { Box08 } from "../../commons/Box_08/Box_08";
+import { Box02 } from "../../commons/Box_02/Box02";
 
-export function PaginaEditarAluno() {
+export function PaginaCadastro() {
   return (
     <div className="pagina">
       <Navbar></Navbar>
 
-      <div className="conteudo-ea">
+      <div className="conteudo">
         <NavbarLateral></NavbarLateral>
         <div className="boox">
-          <Box07></Box07>
-          <Box08></Box08>
+          <Box02></Box02>
         </div>
       </div>
     </div>
   );
 }
+ */

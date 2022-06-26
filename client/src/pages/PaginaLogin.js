@@ -1,4 +1,4 @@
-import logo from "../../util/logo-amarelo.png";
+/* import logo from "../../util/logo-amarelo.png";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./PaginaLogin.css";
@@ -43,8 +43,13 @@ export function PaginaLogin() {
 							Entrar
 						</button>
 					</form>
+					<footer>
+						<p>Não tem uma conta?</p>
+						<button onClick={() => navigate("/cadastro")}>Criar Conta</button>
+					</footer>
 				</section>
 			</section>
 		</section>
 	);
 }
+ */

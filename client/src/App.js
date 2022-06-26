@@ -1,20 +1,24 @@
-import "./util/styles/global.css";
-import "./util/styles/typos.css";
-import "./util/styles/colors.css";
-
-import { PaginaLogin } from "./components/pages/PaginaLogin";
-import "./App.css";
+// Sistema
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { createContext, useState } from "react";
+import "./App.css";
 
-import { PaginaInicial } from "./components/pages/PaginaInicial/PaginaInicial";
-import { PaginaCadastro } from "./components/pages/PaginaCadastro/PaginaCadastro";
-import { PaginaEditarAluno } from "./components/pages/PaginaEditarAluno/PaginaEditarAluno";
-import { PaginaEditarAvaliacao } from "./components/pages/PaginaEditarAvaliacao/PaginaEditarAvaliacao";
-import { PaginaNovaAvaliacao } from "./components/pages/PaginaNovaAvaliacao/PaginaNovaAvaliacao";
-import { PaginaVisualizar } from "./components/pages/PaginaVisualizar/PaginaVisualizar";
-import { PaginaVisualizarAvaliacao } from "./components/pages/PaginaVisualizarAvaliacao/PaginaVisualizarAvaliacao";
+// Páginas
+import { PaginaVisualizarAvaliacao } from "./pages/PaginaVisualizarAvaliacao";
+import { PaginaEditarAvaliacao } from "./pages/PaginaEditarAvaliacao";
+import { PaginaNovaAvaliacao } from "./pages/PaginaNovaAvaliacao";
+import { PaginaEditarAluno } from "./pages/PaginaEditarAluno";
+import { PaginaVisualizar } from "./pages/PaginaVisualizar";
+import { PaginaCadastro } from "./pages/PaginaCadastro";
+import { PaginaInicial } from "./pages/PaginaInicial";
+import { PaginaLogin } from "./pages/PaginaLogin";
 
+// Estilos
+import "./styles/global.css";
+import "./styles/typos.css";
+import "./styles/colors.css";
+
+// Contexto de utenticação
 export const AuthContext = createContext(null);
 
 function App() {
