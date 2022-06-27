@@ -1,6 +1,6 @@
 // Sistema
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { createContext, useState } from "react";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import React, { createContext, useEffect, useState } from "react";
 import "./App.css";
 
 // Páginas
@@ -17,9 +17,26 @@ import { PaginaLogin } from "./pages/PaginaLogin";
 import "./styles/global.css";
 import "./styles/typos.css";
 import "./styles/colors.css";
+import { PaginaNovoAdmin } from "./pages/PaginaNovoAdmin";
 
 // Contexto de utenticação
 export const AuthContext = createContext(null);
+
+export function CheckLogin() {
+	const navigate = useNavigate();
+	useEffect(() => {
+		tryLogin();
+	});
+
+	function tryLogin() {
+		if (localStorage.getItem("token") === "null") {
+			alert("É necessário entrar na sua conta.");
+			navigate("/login");
+		}
+	}
+
+	return true;
+}
 
 function App() {
 	//Puxando token do localStorage, se primeira vez ele define "null"
@@ -52,6 +69,7 @@ function routes() {
 			<Route path="/" element={<PaginaInicial></PaginaInicial>}></Route>
 			<Route path="/cadastro" element={<PaginaCadastro></PaginaCadastro>}></Route>
 			<Route path="/login" element={<PaginaLogin></PaginaLogin>}></Route>
+			<Route path="/novoAdmin" element={<PaginaNovoAdmin></PaginaNovoAdmin>}></Route>
 			<Route path="/visualizar" element={<PaginaVisualizar></PaginaVisualizar>}></Route>
 			<Route path="/visualizarAvaliacao" element={<PaginaVisualizarAvaliacao></PaginaVisualizarAvaliacao>}></Route>
 			<Route path="/editarAluno" element={<PaginaEditarAluno></PaginaEditarAluno>}></Route>

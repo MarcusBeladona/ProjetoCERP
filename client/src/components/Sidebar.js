@@ -5,8 +5,9 @@ export function Sidebar() {
 	return (
 		<nav className="sidebar">
 			<NavLink to="/">Dashboard</NavLink>
-			<NavLink to="/alunos">Alunos</NavLink>
-			<NavLink to="/avaliacoes">Avaliações</NavLink>
+			<NavLink to="/visualizar">Visualizar</NavLink>
+			<NavLink to="/editarAluno">Editar Aluno</NavLink>
+			<NavLink to="/novaAvaliacao">Nova Avaliação</NavLink>
 		</nav>
 	);
 }

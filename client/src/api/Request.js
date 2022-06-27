@@ -7,3 +7,11 @@ export function axiosSign(dados) {
 		data: dados,
 	});
 }
+
+export function axiosPostAdmin(dados) {
+	return axios({
+		method: "POST",
+		url: "http://localhost:3010/admins",
+		data: dados,
+	});
+}

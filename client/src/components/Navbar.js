@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../App";
 
 export function Navbar() {
-	const user = useContext(AuthContext).tokenBody;
+	const user = useContext(AuthContext);
 	const navigate = useNavigate();
 
 	// Reseta Token e direciona pra /login
@@ -22,7 +22,7 @@ export function Navbar() {
 				<img src={logoCerp} height="24" alt="logo" />
 			</Link>
 			<section className="navbar-buttons">
-				<p className="t-title">{user.nome}</p>
+				<p className="t-title">{user.tokenBody.nome}</p>
 				<button onClick={logout}>Logout</button>
 			</section>
 		</nav>
