@@ -1,6 +1,6 @@
 import { Box05 } from "../components/Box_05/Box05";
 import { Navbar } from "../components/Navbar";
-import { NavbarLateral } from "../components/NavbarLateral/NavbarLateral";
+import { Sidebar } from "../components/Sidebar";
 import "./PaginaNovaAvaliacao.css";
 
 export function PaginaNovaAvaliacao() {
@@ -9,7 +9,7 @@ export function PaginaNovaAvaliacao() {
       <Navbar></Navbar>
 
       <div className="conteudo">
-        <NavbarLateral></NavbarLateral>
+        <Sidebar></Sidebar>
         <div className="boxavaliacao">
           <Box05></Box05>
         </div>

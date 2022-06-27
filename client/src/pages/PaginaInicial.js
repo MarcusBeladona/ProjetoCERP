@@ -1,15 +1,15 @@
 // Sistema
-/* import { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../App"; */
+import { AuthContext } from "../App"; 
 import "./PaginaInicial.css";
 
 // Componentes
 import { Navbar } from "../components/Navbar";
 
-import { NavbarLateral } from "../components/NavbarLateral/NavbarLateral";
 import { Box } from "../components/Box/Box";
-import { Tabela } from "../components/Tabela/Tabela";
+import { Sidebar } from "../components/Sidebar";
+// import { Tabela } from "../components/Tabela/Tabela";
 
 export function PaginaInicial() {
   const user = useContext(AuthContext);
@@ -26,7 +26,7 @@ export function PaginaInicial() {
     <div className="PaginaIncial">
       <Navbar></Navbar>
       <div className="conteudo">
-        <NavbarLateral></NavbarLateral>
+        <Sidebar></Sidebar>
         <div className="boox">
           <Box></Box>
         </div>

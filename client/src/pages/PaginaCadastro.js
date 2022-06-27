@@ -1,6 +1,6 @@
 import "./PaginaCadastro.css";
 import { Navbar } from "../components/Navbar";
-import { NavbarLateral } from "../components/NavbarLateral/NavbarLateral";
+import { Sidebar } from "../components/Sidebar";
 import { Box02 } from "../components/Box_02/Box02";
 
 export function PaginaCadastro() {
@@ -9,7 +9,7 @@ export function PaginaCadastro() {
       <Navbar></Navbar>
 
       <div className="conteudo">
-        <NavbarLateral></NavbarLateral>
+        <Sidebar></Sidebar>
         <div className="boox">
           <Box02></Box02>
         </div>
