@@ -1,86 +1,46 @@
 import "./Tabela.css";
-import { Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
 export function Tabela() {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
-  return (
-    <div>
-      <table className="tabela">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Nome</th>
-            <th>Data de Matrícula</th>
-            <th>Objetivo</th>
-            <th>Horário</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
+	const lista = [
+		{ nome: "Henrique", data: "10/07/2022", objetivo: "Musculação", horario: "18:00" },
+		{ nome: "Lady Gaga", data: "28/02/2022", objetivo: "Musculação", horario: "16:30" },
+	];
 
-        <tbody className="body-tabela">
-          <tr className="inicio-tabela">
-            <th scope="row">1</th>
-            <td>Antônio Henrique</td>
-            <td>03/07/2020</td>
-            <td className="objetivo">
-              <div className="card-objetivo">Musculação</div>
-            </td>
-            <td className="horario">
-              <div className="card-horario">18:00</div>
-            </td>
-            <td className="botoes">
-              <Button
-                outline
-                color="primary"
-                className="botao"
-                onClick={() => {
-                  navigate("/visualizar");
-                }}
-              >
-                Visualizar
-              </Button>
-              <Button
-                outline
-                color="warning"
-                className="botao"
-                onClick={() => {
-                  navigate("/editarAluno");
-                }}
-              >
-                Editar
-              </Button>
-              <Button color="danger" className="botao">
-                Excluir
-              </Button>
-            </td>
-          </tr>
+	const itens = [];
 
-          <tr className="inicio-tabela">
-            <th scope="row">1</th>
-            <td>Antônio Henrique</td>
-            <td>03/07/2020</td>
-            <td className="objetivo">
-              <div className="card-objetivo">Musculação</div>
-            </td>
-            <td className="horario">
-              <div className="card-horario">18:00</div>
-            </td>
-            <td className="botoes">
-              <Button outline color="primary" className="botao">
-                Visualizar
-              </Button>
-              <Button outline color="warning" className="botao">
-                Editar
-              </Button>
-              <Button color="danger" className="botao">
-                Excluir
-              </Button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
+	for (const [index, pessoa] of lista.entries()) {
+		itens.push(
+			<tr key={index + 1}>
+				<th scope="Tabela-Row">{index + 1}</th>
+				<td>{pessoa.nome}</td>
+				<td>{pessoa.data}</td>
+				<td className="Tabela-Objetivo">{pessoa.objetivo}</td>
+				<td className="Tabela-Horario">{pessoa.horario}</td>
+				<td className="Tabela-Botoes">
+					<button onClick={() => navigate("/visualizar")}>Visualizar</button>
+					<button onClick={() => navigate("/editarAluno")}>Editar</button>
+					<button onClick={() => console.log("não")}>Excluir</button>
+				</td>
+			</tr>
+		);
+	}
+
+	return (
+		<table className="Tabela">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Nome</th>
+					<th>Data de Matrícula</th>
+					<th>Objetivo</th>
+					<th>Horário</th>
+					<th className="Tabela-Botoes">Ações</th>
+				</tr>
+			</thead>
+			<tbody>{itens}</tbody>
+		</table>
+	);
 }

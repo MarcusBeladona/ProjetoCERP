@@ -1,36 +1,30 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import logoCerp from "../util/logo-cerp.png";
 import "./Navbar.css";
 
 import { useContext } from "react";
-import { AuthContext } from "../../../App";
+import { AuthContext } from "../App";
 
 export function Navbar() {
-	const user = useContext(AuthContext);
+	const user = useContext(AuthContext).tokenBody;
 	const navigate = useNavigate();
 
-	if (user.tokenBody.token !== "null") {
-		return (
-			// Logado
-			<nav className="nav-superior">
-				<section className="Navegador-Menu">
-					<NavLink to="/">Home</NavLink>
-					<button onClick={logout}>Logout</button>
-				</section>
-			</nav>
-		);
-	} else {
-		return (
-			<section className="nav-superior">
-				<section className="Navegador-Menu">
-					<NavLink to="/cadastro">Cadastro</NavLink>
-					<NavLink to="/login">Login</NavLink>
-				</section>
-			</section>
-		);
-	}
-
+	// Reseta Token e direciona pra /login
 	function logout() {
 		user.setToken({ token: "null", nome: "null" });
 		navigate("/login");
 	}
+
+	return (
+		// Logado
+		<nav className="navbar">
+			<Link to="/">
+				<img src={logoCerp} height="24" alt="logo" />
+			</Link>
+			<section className="navbar-buttons">
+				<p className="t-title">{user.nome}</p>
+				<button onClick={logout}>Logout</button>
+			</section>
+		</nav>
+	);
 }

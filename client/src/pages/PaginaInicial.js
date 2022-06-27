@@ -1,34 +1,36 @@
 // Sistema
-import { useContext, useEffect } from "react";
+/* import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../App"; */
+import "./PaginaInicial.css";
 
 // Componentes
-import { Navbar } from "../../commons/Navbar/Navbar";
+import { Navbar } from "../components/Navbar";
+import { Sidebar } from "../components/Sidebar";
 
-import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
 import { Box } from "../components/Box/Box";
-import { AuthContext } from "../App";
+import { Tabela } from "../components/Tabela/Tabela";
 
 export function PaginaInicial() {
-	const user = useContext(AuthContext);
-	const navigate = useNavigate();
+	/* const user = useContext(AuthContext).tokenBody;
+	const navigate = useNavigate(); */
 
-	useEffect(() => {
+	/* useEffect(() => {
 		if (user.tokenBody.token === "null") {
 			alert("É necessário entrar na sua conta.");
 			navigate("/login");
 		}
-	}, [user.tokenBody.token, navigate]);
+	}, [user.tokenBody.token, navigate]); */
 
 	return (
-		<div className="PaginaIncial">
+		<section className="PaginaInicial">
 			<Navbar></Navbar>
-			<div className="conteudo">
-				<NavbarLateral></NavbarLateral>
-				<div className="boox">
-					<Box></Box>
-				</div>
-			</div>
-		</div>
+			<section className="conteudo">
+				<Sidebar></Sidebar>
+				<section className="area">
+					<Tabela></Tabela>
+				</section>
+			</section>
+		</section>
 	);
 }

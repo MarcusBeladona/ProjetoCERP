@@ -1,0 +1,26 @@
+.sidebar {
+	min-width: 256px;
+	height: auto;
+	background-color: #181818;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	gap: 8px;
+}
+
+.sidebar a {
+	color: #f9bc2a;
+	text-align: left;
+	padding: 14px 16px;
+}
+
+.sidebar a:hover {
+	background-color: #353535;
+}
+
+.sidebar a.active {
+	pointer-events: none;
+	background-color: #353535;
+	text-align: left;
+	padding: 14px 16px;
+}
