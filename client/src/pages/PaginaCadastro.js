@@ -1,7 +1,7 @@
-/* import "./PaginaCadastro.css";
-import { Navbar } from "../../commons/Navbar/Navbar";
-import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
-import { Box02 } from "../../commons/Box_02/Box02";
+import "./PaginaCadastro.css";
+import { Navbar } from "../components/Navbar";
+import { NavbarLateral } from "../components/NavbarLateral/NavbarLateral";
+import { Box02 } from "../components/Box_02/Box02";
 
 export function PaginaCadastro() {
   return (
@@ -17,4 +17,3 @@ export function PaginaCadastro() {
     </div>
   );
 }
- */

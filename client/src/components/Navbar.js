@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 import { useContext } from "react";
-import { AuthContext } from "../../../App";
+import { AuthContext } from "../App";
 
 export function Navbar() {
 	const user = useContext(AuthContext);

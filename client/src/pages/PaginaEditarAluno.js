@@ -1,8 +1,8 @@
-/* import "./PaginaEditarAluno.css";
-import { Navbar } from "../../commons/Navbar/Navbar";
-import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
-import { Box07 } from "../../commons/Box_07/Box_07";
-import { Box08 } from "../../commons/Box_08/Box_08";
+import "./PaginaEditarAluno.css";
+import { Navbar } from "../components/Navbar";
+import { Box07 } from "../components/Box_07/Box_07";
+import { Box08 } from "../components/Box_08/Box_08";
+import { NavbarLateral } from "../components/NavbarLateral/NavbarLateral";
 
 export function PaginaEditarAluno() {
   return (
@@ -19,4 +19,3 @@ export function PaginaEditarAluno() {
     </div>
   );
 }
- */

@@ -1,6 +1,6 @@
-/* import { Box08 } from "../../commons/Box_08/Box_08";
-import { Navbar } from "../../commons/Navbar/Navbar";
-import { NavbarLateral } from "../../commons/NavbarLateral/NavbarLateral";
+import { Box08 } from "../components/Box_08/Box_08"
+import { Navbar } from "../components/Navbar";
+import { NavbarLateral } from "../components/NavbarLateral/NavbarLateral";
 import "./PaginaEditarAvaliacao.css";
 
 export function PaginaEditarAvaliacao() {
@@ -17,4 +17,3 @@ export function PaginaEditarAvaliacao() {
 		</div>
 	);
 }
- */
