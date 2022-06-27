@@ -1,13 +1,15 @@
 // Sistema
-import { useContext, useEffect } from "react";
+/* import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../App"; */
+import "./PaginaInicial.css";
 
 // Componentes
 import { Navbar } from "../components/Navbar";
 
 import { NavbarLateral } from "../components/NavbarLateral/NavbarLateral";
 import { Box } from "../components/Box/Box";
-import { AuthContext } from "../App";
+import { Tabela } from "../components/Tabela/Tabela";
 
 export function PaginaInicial() {
   const user = useContext(AuthContext);

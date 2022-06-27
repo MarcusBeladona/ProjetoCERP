@@ -1,56 +1,50 @@
-
-.nav-superior{
-    position: relative;
-    height: 100px;
-    background-color: #212121;
-    display: flex;    
-    justify-content: right;
-    align-items: center;
-    z-index: 1;
-
+.navbar {
+	display: flex;
+	background-color: #212121;
+	justify-content: space-between;
+	padding: 8px 16px;
+	align-items: center;
 }
 
-.nav-superior a{
-    display: block;
-    color: #f9bc2a;
-    margin: 20px;
-    text-decoration: none;
-    padding: 10px;
-
+.navbar-buttons {
+	align-items: center;
+	display: flex;
+	gap: 16px;
 }
 
-.nav-superior a:hover{
-    background-color: #353535;
+.navbar a,
+.navbar button,
+.navbar p {
+	color: #f9bc2a;
+	background-color: transparent;
 }
 
+.navbar a:hover,
+.navbar button:hover {
+	background-color: #353535;
+}
 
 /*----------------*/
 
-.container-1{
-    display: flex;
-
+.container-1 {
+	display: flex;
 }
 
-.container-1 .nav-esquerdo{
-    z-index: 1;
-    flex-basis: 255px;
-    flex-shrink: 0;
-    height: 800px;
-    background-color: #212121;
-
-
+.container-1 .nav-esquerdo {
+	z-index: 1;
+	flex-basis: 255px;
+	flex-shrink: 0;
+	height: 800px;
+	background-color: #212121;
 }
 
-.container-1 .nav-esquerdo a{
-    display: block;
-    color: #f9bc2a;
-    padding: 20px;
-    text-decoration: none;
-
+.container-1 .nav-esquerdo a {
+	display: block;
+	color: #f9bc2a;
+	padding: 20px;
+	text-decoration: none;
 }
 
-.container-1 .nav-esquerdo a:hover{
-    background-color: #353535;
-
+.container-1 .nav-esquerdo a:hover {
+	background-color: #353535;
 }
-
