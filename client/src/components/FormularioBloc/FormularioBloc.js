@@ -10,9 +10,9 @@ export function FormularioBloc(){
         <Row className="linha_01">
           <Col md={6}>
               <Label for="exemplo_nome">
-                Nome <br></br>   
+                Nome <br></br>
               </Label>
-              <Input 
+              <Input
                 className="inputt"
                 id="nome"
                 placeholder="Ruan Gabriel Lopes e Souza"
@@ -22,7 +22,7 @@ export function FormularioBloc(){
 
         <Col md={3}>
           <Label for="exempo_data">
-            Nascimento <br></br> 
+            Nascimento <br></br>
           </Label>
           <Input
             className="inputt"
@@ -35,7 +35,7 @@ export function FormularioBloc(){
 
         <Col md={3}>
           <Label for="exempo_telefone">
-            Telefone <br></br> 
+            Telefone <br></br>
           </Label>
           <Input
             className="inputt"
@@ -50,9 +50,9 @@ export function FormularioBloc(){
 
         <Col md={6}>
             <Label for="exemplo_nome">
-              CPF <br></br>   
+              CPF <br></br>
             </Label>
-            <Input 
+            <Input
               className="inputt"
               id="CPF"
               placeholder="111.111.111-11"
@@ -63,7 +63,7 @@ export function FormularioBloc(){
 
         <Col md={6}>
         <Label for="exempo_data">
-          RG <br></br> 
+          RG <br></br>
         </Label>
         <Input
           className="inputt"
@@ -80,9 +80,9 @@ export function FormularioBloc(){
 
           <Col md={9}>
               <Label for="exemplo_nome">
-                Rua <br></br>   
+                Rua <br></br>
               </Label>
-              <Input 
+              <Input
                 className="inputt"
                 id="rua"
                 placeholder="Rua Cinco"
@@ -92,7 +92,7 @@ export function FormularioBloc(){
 
           <Col md={3}>
           <Label for="exempo_data">
-             Bairro <br></br> 
+             Bairro <br></br>
           </Label>
           <Input
             className="inputt"
@@ -106,9 +106,9 @@ export function FormularioBloc(){
           <Row className="linha">
           <Col md={4}>
               <Label for="exemplo_nome">
-                Cidade <br></br>   
+                Cidade <br></br>
               </Label>
-              <Input 
+              <Input
                 className="inputt"
                 id="nome"
                 placeholder="Tabuleiro"
@@ -118,7 +118,7 @@ export function FormularioBloc(){
 
         <Col md={4}>
           <Label for="exempo_data">
-            Número <br></br> 
+            Número <br></br>
           </Label>
           <Input
             className="inputt"
@@ -131,7 +131,7 @@ export function FormularioBloc(){
 
         <Col md={4}>
           <Label for="exempo_telefone">
-            CEP <br></br> 
+            CEP <br></br>
           </Label>
           <Input
             className="inputt"

@@ -49,13 +49,13 @@ a {
 	border: none;
 }
 
-.conteudo {
+.Conteudo {
 	display: flex;
 	flex-grow: 1;
 	width: 100%;
 }
 
-.area {
+.Area {
 	padding: 32px;
 	width: inherit;
 	background-color: #f5f5f5;
