@@ -31,13 +31,31 @@ postAvaliacao = (req, res) => {
 
 listarAvaliacoes = (req, res) => {
   avaliacaoModel
-    .find({aluno:req.params.id})
+    .find({ aluno: req.params.id })
     .exec()
     .then((a) => res.status(200).json(avaliacaoView.renderAll(a)))
     .catch((e) => res.status(404).send(e));
-}
+};
+
+putEditAvaliacao = (req, res) => {
+  avaliacaoModel
+    .findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .exec()
+    .then((a) => res.status(200).json(avaliacaoView.render(a)))
+    .catch((e) => res.status(404).send(e));
+};
+
+deleteAvaliacao = (req, res) => {
+  avaliacaoModel
+    .findByIdAndDelete(req.params.id)
+    .exec()
+    .then((a) => res.status(200).json("Avaliação deletada com sucesso!"))
+    .catch((e) => res.status(400).send(e));
+};
 
 module.exports = {
-  postAvaliacao, 
+  postAvaliacao,
   listarAvaliacoes,
-}
+  putEditAvaliacao,
+  deleteAvaliacao
+};

@@ -1,7 +1,7 @@
 function render(avaliacao) {
   return {
     id: avaliacao._id,
-    // aluno: bota a view aluno aquir
+    aluno: avaliacao.aluno,
     torax: avaliacao.torax,
     cintura: avaliacao.cintura,
     abdomen: avaliacao.abdomen,
