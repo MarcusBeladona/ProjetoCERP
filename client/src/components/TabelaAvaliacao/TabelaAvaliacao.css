@@ -47,3 +47,18 @@ tr:nth-child(even){
 
 
 }
+
+.visuall{
+	background-color: #0faa1e;
+    margin: 3px;
+}
+
+.editt{
+	background-color: #F9BC2A;
+    margin: 3px;
+}
+
+.delett{
+	background-color: #CA1313;
+    margin: 3px;
+}

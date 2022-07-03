@@ -48,3 +48,14 @@ tr:nth-child(even) {
 	border: 1px solid #f9bc2a;
 	border-radius: 5px;
 }
+.visuall{
+	background-color: #0faa1e;
+}
+
+.editt{
+	background-color: #F9BC2A;
+}
+
+.delett{
+	background-color: #CA1313;
+}

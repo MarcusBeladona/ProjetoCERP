@@ -1,9 +1,10 @@
 
 
-.linha { 
-    display: flex;
+.linha{ 
     align-items: center;
-    align-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .inputt{

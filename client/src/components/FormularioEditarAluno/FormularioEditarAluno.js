@@ -7,7 +7,7 @@ export function FormularioEditarAluno(){
      <div className="formm">
       <Form className="formulario">
       <h6 className="titulo">Informações pessoais</h6>
-        <Row className="linha_01">
+        <Row className="linha">
           <Col md={6}>
               <Label for="exemplo_nome">
                 Nome <br></br>   
@@ -25,7 +25,7 @@ export function FormularioEditarAluno(){
           </Label>
           <Input
             className="inputt"
-            id="data"
+            id="text"
             placeholder=" DD/MM/AAAA"
             type="date"
           />
@@ -42,10 +42,7 @@ export function FormularioEditarAluno(){
             
           />
         </Col>
-        </Row>
-
-        <Row className="linha">
-
+        
         <Col md={6}>
             <Label for="exemplo_nome">
               CPF <br></br>   
@@ -57,6 +54,11 @@ export function FormularioEditarAluno(){
               type="number"
             />
         </Col>
+        
+        </Row>
+
+        <Row className="linha">
+
 
         <Col md={6}>
         <Label for="exempo_data">
@@ -72,9 +74,9 @@ export function FormularioEditarAluno(){
 
         <h6 className="titulo">Endereço</h6>
 
-        <Row className="linha_01">
+        <Row className="linha">
 
-          <Col md={9}>
+          <Col md={6}>
               <Label for="exemplo_nome">
                 Rua <br></br>   
               </Label>
@@ -95,9 +97,6 @@ export function FormularioEditarAluno(){
             placeholder="Centro"
           />
           </Col>
-          </Row>
-
-          <Row className="linha">
           <Col md={4}>
               <Label for="exemplo_nome">
                 Cidade <br></br>   
@@ -120,6 +119,10 @@ export function FormularioEditarAluno(){
             type="number"
           />
         </Col>
+          </Row>
+
+          <Row className="linha">
+
 
         <Col md={4}>
           <Label for="exempo_telefone">

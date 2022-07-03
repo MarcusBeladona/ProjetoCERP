@@ -7,7 +7,7 @@ export function FormularioBloc(){
      <div className="formm">
       <Form className="formulario">
       <h6 className="titulo">Informações pessoais</h6>
-        <Row className="linha_01">
+        <Row className="linha">
           <Col md={6}>
               <Label for="exemplo_nome">
                 Nome <br></br>
@@ -44,10 +44,7 @@ export function FormularioBloc(){
             disabled
           />
         </Col>
-        </Row>
-
-        <Row className="linha">
-
+        
         <Col md={6}>
             <Label for="exemplo_nome">
               CPF <br></br>
@@ -60,6 +57,10 @@ export function FormularioBloc(){
               disabled
             />
         </Col>
+        </Row>
+
+        <Row className="linha">
+
 
         <Col md={6}>
         <Label for="exempo_data">
@@ -76,7 +77,7 @@ export function FormularioBloc(){
 
         <h6 className="titulo">Endereço</h6>
 
-        <Row className="linha_01">
+        <Row className="linha">
 
           <Col md={9}>
               <Label for="exemplo_nome">
@@ -101,9 +102,6 @@ export function FormularioBloc(){
             disabled
           />
           </Col>
-          </Row>
-
-          <Row className="linha">
           <Col md={4}>
               <Label for="exemplo_nome">
                 Cidade <br></br>
@@ -116,7 +114,11 @@ export function FormularioBloc(){
               />
           </Col>
 
-        <Col md={4}>
+
+          </Row>
+
+          <Row className="linha">
+          <Col md={4}>
           <Label for="exempo_data">
             Número <br></br>
           </Label>

@@ -7,12 +7,16 @@ import { Sidebar } from "../components/Sidebar";
 export function PaginaEditarAluno() {
   return (
     <div className="pagina">
+      <div className="navegadorrr">
       <Navbar></Navbar>
+      </div>
+
+
 
       <div className="conteudo-ea">
         <Sidebar></Sidebar>
         <div className="boox">
-          <Box07></Box07>
+          <Box07></Box07> <br></br>
           <Box08></Box08>
         </div>
       </div>

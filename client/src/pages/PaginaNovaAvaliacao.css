@@ -1,6 +1,8 @@
 .pagina-v{
     display: block;
+    background-color: #F3F3F3;
 }
+
 
 .pagina-v .conteudo{
     display: flex;
@@ -21,7 +23,6 @@
     display: block;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
-    margin-top: 50px
+    margin: 20px;
 }
 

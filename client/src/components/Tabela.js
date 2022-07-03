@@ -20,9 +20,9 @@ export function Tabela() {
 				<td className="Tabela-Objetivo">{pessoa.objetivo}</td>
 				<td className="Tabela-Horario">{pessoa.horario}</td>
 				<td className="Tabela-Botoes">
-					<button onClick={() => navigate("/visualizar")}>Visualizar</button>
-					<button onClick={() => navigate("/editarAluno")}>Editar</button>
-					<button onClick={() => console.log("não")}>Excluir</button>
+					<button  className="visuall" onClick={() => navigate("/visualizar")}>Visualizar</button>
+					<button className="editt"onClick={() => navigate("/editarAluno")}>Editar</button>
+					<button className="delett" onClick={() => console.log("não")}>Excluir</button>
 				</td>
 			</tr>
 		);

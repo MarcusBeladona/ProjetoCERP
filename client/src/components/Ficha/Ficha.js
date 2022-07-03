@@ -9,8 +9,8 @@ export function FichaAvaliacao(){
       <h6 className="titulo">Esta é sua avaliação de Antroprometrica</h6>
       
       <br></br>  
-      <h3><b>Biopendência</b></h3>
-        <Row className="linha_01">
+      <h3><b>Biopendência</b></h3> <br></br>
+        <Row className="linha">
           <Col md={6}>
               <Label for="exemplo_nome">
                 Peso <br></br>   
@@ -58,8 +58,10 @@ export function FichaAvaliacao(){
             type="number"
             
           />
+      
         </Col>
-        
+        </Row>
+        <Row className="linha">
         <Col md={6}>
         <Label for="exempo_data">
           Idade Corporal<br></br> 
@@ -150,6 +152,8 @@ export function FichaAvaliacao(){
         />
         </Col>
 
+        </Row>
+        <Row className="linha">
 
         <Col md={6}>
         <Label for="exempo_data">
@@ -175,8 +179,8 @@ export function FichaAvaliacao(){
         </Row>
 
         <br></br>  
-        <h3><b>Membros Superiores</b></h3>
-        <Row className="linha_01">
+        <h3><b>Membros Superiores</b></h3><br></br>
+        <Row className="linha">
           <Col md={6}>
               <Label for="exemplo_nome">
                 Punho<br></br>   
@@ -198,9 +202,7 @@ export function FichaAvaliacao(){
             placeholder="17cm"
           />
           </Col>
-          </Row>
 
-          <Row className="linha">
           <Col md={6}>
               <Label for="exemplo_nome">
                 Braço -  Biceps relaxados <br></br>   
@@ -222,6 +224,9 @@ export function FichaAvaliacao(){
             type="number"
           />
         </Col>
+        </Row>
+
+        <Row className="linha">
         <Col md={6}>
           <Label for="exempo_telefone">
             Envergadura <br></br> 
@@ -237,7 +242,7 @@ export function FichaAvaliacao(){
 
         <br></br>  
         <h3><b>Membros Inferiores</b></h3>
-        <Row className="linha_01">
+        <Row className="linha">
           <Col md={6}>
               <Label for="exemplo_nome">
                 Quadriceps proximal<br></br>   
@@ -259,10 +264,8 @@ export function FichaAvaliacao(){
             placeholder="67cm"
           />
           </Col>
-          </Row>
 
-          <Row className="linha">
-          <Col md={6}>
+          <Col md={4}>
               <Label for="exemplo_nome">
                 Quadriceps distal<br></br>   
               </Label>
@@ -272,7 +275,7 @@ export function FichaAvaliacao(){
                 placeholder="48cm"
               />
           </Col>
-        <Col md={6}>
+        <Col md={4}>
           <Label for="exempo_data">
             Panturrilha <br></br> 
           </Label>
@@ -283,7 +286,10 @@ export function FichaAvaliacao(){
             type="number"
           />
         </Col>
-        <Col md={6}>
+        </Row>
+        
+        <Row className="linha">
+        <Col md={4}>
           <Label for="exempo_telefone">
             Tornozelo <br></br> 
           </Label>

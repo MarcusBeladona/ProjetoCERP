@@ -33,7 +33,7 @@ export function TabelaAvaliacao() {
               <Button
                 outline
                 color="primary"
-                className="botao"
+                className="visuall"
                 onClick={() => {
                   navigate("/visualizarAvaliacao");
                 }}
@@ -43,14 +43,14 @@ export function TabelaAvaliacao() {
               <Button
                 outline
                 color="warning"
-                className="botao"
+                className="editt"
                 onClick={() => {
                   navigate("/editarAvaliacao");
                 }}
               >
                 Editar
               </Button>
-              <Button color="danger" className="botao">
+              <Button color="danger" className="delett">
                 Excluir
               </Button>
             </td>
@@ -65,13 +65,13 @@ export function TabelaAvaliacao() {
             </td>
 
             <td className="botoes">
-              <Button outline color="primary" className="botao">
+              <Button outline color="primary" className="visuall">
                 Visualizar
               </Button>
-              <Button outline color="warning" className="botao">
+              <Button outline color="warning" className="editt">
                 Editar
               </Button>
-              <Button color="danger" className="botao">
+              <Button color="danger" className="delett">
                 Excluir
               </Button>
             </td>

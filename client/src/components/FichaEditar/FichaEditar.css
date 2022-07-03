@@ -1,13 +1,14 @@
 
 
 .linha { 
-    display: flex;
     align-items: center;
-    align-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .inputt{
-    padding: 10px;
+    padding: 20px;
     margin: 5px;
 }
 

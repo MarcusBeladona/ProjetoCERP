@@ -1,0 +1,32 @@
+.container-r{
+
+    display: flex;
+}
+
+.resultados{
+    border: 1px solid #bfbebb;
+    box-shadow: 0px 2px 8px rgba(106, 115, 129, 0.12);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.topo{
+    background-color: #bfbebb;
+}
+
+.texto-red{
+
+    font-size: 40px;
+    color: #CA1313;
+}
+
+
+.texto-green{
+
+    font-size: 40px;
+    color: #0FAA1E;
+}
+
+
+
+  
