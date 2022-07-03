@@ -15,3 +15,22 @@ export function axiosPostAdmin(dados) {
 		data: dados,
 	});
 }
+
+export function axiosPutAluno(token, dados) {
+	return axios({
+		method: "PUT",
+		url: "http://localhost:3010/alunos",
+		data: dados,
+	});
+}
+
+export function axiosPostAluno(token, dados) {
+	return axios({
+		method: "POST",
+		url: "http://localhost:3010/alunos",
+		headers: {
+			token: token,
+		},
+		data: dados,
+	});
+}

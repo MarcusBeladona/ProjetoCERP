@@ -10,6 +10,7 @@
 input {
 	border: solid 1px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
+	background-color: rgb(249, 249, 249);
 	line-height: 20px;
 	font-size: 16px;
 	padding: 10px;
@@ -28,6 +29,18 @@ a {
 
 .button-primary {
 	background-color: #f9bc2a;
+	width: min-content;
+	padding: 10px 24px;
+	border-radius: 4px;
+	line-height: 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border: none;
+}
+
+.button-success {
+	background-color: #108b1c;
+	color: white;
 	width: min-content;
 	padding: 10px 24px;
 	border-radius: 4px;
@@ -63,6 +76,7 @@ a {
 	display: flex;
 	flex-grow: 1;
 	width: 100%;
+	height: 100%;
 }
 
 .Area {
