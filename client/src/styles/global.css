@@ -23,6 +23,7 @@ a {
 	border: none;
 	padding: 10px 16px;
 	border-radius: 4px;
+	cursor: pointer;
 }
 
 .button-primary {
