@@ -2,17 +2,25 @@
 	height: inherit;
 }
 
-.EditarAluno {
+.PaginaEditarAluno .EditarAvaliacao .Formulario h3 {
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+
+.EditarAluno,
+.EditarAvaliacao {
 	background-color: white;
 	border-radius: 8px;
 	padding: 16px;
+	margin-bottom: 16px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 16px;
 }
 
-.EditarAluno .Formulario {
+.EditarAluno .Formulario,
+.EditarAvaliacao .Formulario {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -20,13 +28,24 @@
 	gap: 16px;
 }
 
-.EditarAluno footer {
+.EditarAluno footer,
+.EditarAvaliacao footer {
 	align-self: flex-end;
 	display: flex;
 	gap: 16px;
 }
 
 .PaginaEditarAluno .DadosPessoais {
+	width: 100%;
+	display: grid;
+	gap: 16px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+ .PaginaEditarAluno .Formulario .Bioimpedancia,
+ .PaginaEditarAluno .Formulario .Tronco,
+ .PaginaEditarAluno .Formulario .MembrosSuperiores,
+ .PaginaEditarAluno .Formulario .MembrosInferiores{
 	width: 100%;
 	display: grid;
 	gap: 16px;
@@ -41,7 +60,11 @@
 }
 
 .PaginaEditarAluno .DadosPessoais article,
-.PaginaEditarAluno .DadosEndereco article {
+.PaginaEditarAluno .DadosEndereco article,
+.PaginaEditarAluno .Bioimpedancia article,
+.PaginaEditarAluno .Tronco article,
+.PaginaEditarAluno .MembrosSuperiores article,
+.PaginaEditarAluno .MembrosInferiores article {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -50,7 +73,11 @@
 }
 
 .PaginaEditarAluno .DadosPessoais article input,
-.PaginaEditarAluno .DadosEndereco article input {
+.PaginaEditarAluno .DadosEndereco article input,
+.PaginaEditarAluno .Bioimpedancia article input,
+.PaginaEditarAluno .Tronco article input,
+.PaginaEditarAluno .MembrosSuperiores article input,
+.PaginaEditarAluno .MembrosInferiores article input {
 	width: 100%;
 }
 
