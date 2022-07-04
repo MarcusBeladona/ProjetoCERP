@@ -1,4 +1,3 @@
-// import { Box06 } from "../components/Box_06/Box06";
 import { useForm } from "react-hook-form";
 import { Navbar } from "../components/Navbar";
 import { Sidebar } from "../components/Sidebar";
@@ -12,7 +11,7 @@ export function PaginaVisualizarAvaliacao() {
         <Sidebar></Sidebar>
         <div className="Area">
           <VisualizarAvaliacao></VisualizarAvaliacao>
-          {/* <Box06></Box06> */}
+          
         </div>
       </div>
     </div>

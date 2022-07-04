@@ -149,12 +149,12 @@ function TabelaAvalicao() {
     {
       avaliador: "Hermes",
       data: "10/07/2022",
-      tipo: "Musculação"
+      tipo: "Musculação",
     },
     {
       avaliador: "Hermes",
       data: "28/02/2022",
-      tipo: "Musculação"
+      tipo: "Musculação",
     },
   ];
 
@@ -168,7 +168,10 @@ function TabelaAvalicao() {
         <td>{pessoa.data}</td>
         <td className="Tabela-Tipo">{pessoa.tipo}</td>
         <td className="Tabela-Botoes">
-          <button className="c-success" onClick={() => navigate("/visualizarAvaliacao")}>
+          <button
+            className="c-success"
+            onClick={() => navigate("/visualizarAvaliacao")}
+          >
             Visualizar
           </button>
           <button
