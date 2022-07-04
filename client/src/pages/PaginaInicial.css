@@ -4,3 +4,54 @@
 	height: 100%;
 	width: 100%;
 }
+
+.Tabela {
+	background-color: white;
+	border-radius: 8px;
+	width: 100%;
+	overflow: hidden;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,
+td {
+	width: auto;
+	height: auto;
+	padding: 16px;
+	align-items: center;
+}
+
+tr:hover {
+	background-color: #ebebeb;
+}
+
+tr:nth-child(even) {
+	background-color: #fcfcfc;
+}
+
+.Tabela-Botoes {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+}
+
+.body-tabela .inicio-tabela .objetivo .card-objetivo {
+	box-sizing: border-box;
+	align-items: center;
+	gap: 10px;
+	height: 28px;
+	background-color: rgba(15, 170, 30, 0.25);
+	border: 1px solid #0faa1e;
+	border-radius: 5px;
+}
+
+.body-tabela .inicio-tabela .horario .card-horario {
+	box-sizing: border-box;
+	align-items: center;
+	gap: 10px;
+	height: 28px;
+	background-color: rgba(249, 188, 42, 0.25);
+	border: 1px solid #f9bc2a;
+	border-radius: 5px;
+}

@@ -1,28 +1,118 @@
-.pagina-v{
-    display: flex;
-    flex-direction: column;
-    background-color: #F3F3F3;
-    height: 100%;
+.PaginaVisualizar {
+	height: inherit;
 }
 
-.pagina-v .conteudo{
-    display: flex;
+/* .PaginaVisualizar .EditarAvaliacao .Formulario h3 {
+	padding-bottom: 12px;
+	padding-top: 12px;
+} */
+
+.Visualizar,
+.EditarAvaliacao {
+	background-color: white;
+	border-radius: 8px;
+	padding: 16px;
+	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
 }
 
-.pagina-v .conteudo .boox-v{
-
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin: 20px;
-
+.Visualizar .Formulario {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
 }
 
-.pagina-v .conteudo .boox-v2{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
-    margin-top: 50px
+.Visualizar footer {
+	align-self: flex-end;
+	display: flex;
+	gap: 16px;
 }
 
+.PaginaVisualizar .DadosPessoais {
+	width: 100%;
+	display: grid;
+	gap: 16px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.PaginaVisualizar .DadosEndereco {
+	width: 100%;
+	display: grid;
+	gap: 16px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.PaginaVisualizar .DadosPessoais article,
+.PaginaVisualizar .DadosEndereco article {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+	width: 1fr;
+}
+
+.PaginaVisualizar .DadosPessoais article input,
+.PaginaVisualizar .DadosEndereco article input {
+	width: 100%;
+}
+
+.PaginaVisualizar .grid-nome {
+	grid-column: 1/3;
+}
+
+.PaginaVisualizar .grid-rua {
+	grid-column: 1/3;
+}
+
+.PaginaVisualizar .grid-bairro {
+	grid-column: 3/5;
+}
+
+.PaginaVisualizar .grid-cidade {
+	grid-column: 1/3;
+}
+
+.TabelaAvaliacao {
+	background-color: white;
+	border-radius: 8px;
+	width: 100%;
+	overflow: hidden;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,
+td {
+	width: auto;
+	height: auto;
+	padding: 16px;
+	align-items: center;
+}
+
+tr:hover {
+	background-color: #ebebeb;
+}
+
+tr:nth-child(even) {
+	background-color: #fcfcfc;
+}
+
+.Tabela-Botoes {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+}
+
+.body-tabela .inicio-tabela .tipo .card-tipo {
+	box-sizing: border-box;
+	align-items: center;
+	gap: 10px;
+	height: 28px;
+	background-color: rgba(15, 170, 30, 0.25);
+	border: 1px solid #0faa1e;
+	border-radius: 5px;
+}
