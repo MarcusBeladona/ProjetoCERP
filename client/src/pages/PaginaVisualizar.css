@@ -7,6 +7,16 @@
 	padding-top: 12px;
 } */
 
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 16px;
+}
+
+.header button {
+	width: fit-content;
+}
+
 .Visualizar,
 .EditarAvaliacao {
 	background-color: white;
@@ -76,13 +86,14 @@
 	grid-column: 1/3;
 }
 
-.TabelaAvaliacao {
+.TabelaAvaliacao, .container {
 	background-color: white;
 	border-radius: 8px;
 	width: 100%;
 	overflow: hidden;
 	border-collapse: collapse;
 	border-spacing: 0;
+	padding: 16px;
 }
 
 th,

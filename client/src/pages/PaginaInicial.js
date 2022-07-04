@@ -6,65 +6,93 @@ import { useNavigate } from "react-router-dom";
 
 // Componentes
 import { Navbar } from "../components/Navbar";
-import { Sidebar } from "../components/Sidebar";
+// import { Box04 } from "../components/Box_04/Box04";
+// import { TabelaAvaliacao } from "../components/TabelaAvaliacao/TabelaAvaliacao";
+// import { Sidebar } from "../components/Sidebar";
 // import { Tabela } from "../components/Tabela";
 
 export function PaginaInicial() {
-	if (CheckLogin()) {
-		return (
-			<div className="PaginaInicial">
-				<Navbar></Navbar>
-				<div className="Conteudo">
-					<Sidebar></Sidebar>
-					<div className="Area">
-						<Tabela></Tabela>
-					</div>
-				</div>
-			</div>
-		);
-	}
+  if (CheckLogin()) {
+    return (
+      <div className="PaginaInicial">
+        <Navbar></Navbar>
+        <div className="Conteudo">
+          {/* <Sidebar></Sidebar> */}
+          <div className="Area">
+            <Tabela></Tabela>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 function Tabela() {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	const lista = [
-		{ nome: "Henrique", data: "10/07/2022", objetivo: "Musculação", horario: "18:00" },
-		{ nome: "Lady Gaga", data: "28/02/2022", objetivo: "Musculação", horario: "16:30" },
-	];
+  const lista = [
+    {
+      nome: "Henrique",
+      data: "10/07/2022",
+      objetivo: "Musculação",
+      horario: "18:00",
+    },
+    {
+      nome: "Lady Gaga",
+      data: "28/02/2022",
+      objetivo: "Musculação",
+      horario: "16:30",
+    },
+  ];
 
-	const itens = [];
+  const itens = [];
 
-	for (const [index, pessoa] of lista.entries()) {
-		itens.push(
-			<tr key={index + 1}>
-				<th scope="Tabela-Row">{index + 1}</th>
-				<td>{pessoa.nome}</td>
-				<td>{pessoa.data}</td>
-				<td className="Tabela-Objetivo">{pessoa.objetivo}</td>
-				<td className="Tabela-Horario">{pessoa.horario}</td>
-				<td className="Tabela-Botoes">
-					<button  className="c-success" onClick={() => navigate("/visualizar")}>Visualizar</button>
-					<button className="c-primary"onClick={() => navigate("/editarAluno")}>Editar</button>
-					<button className="c-warning" onClick={() => console.log("não")}>Excluir</button>
-				</td>
-			</tr>
-		);
-	}
+  for (const [index, pessoa] of lista.entries()) {
+    itens.push(
+      <tr key={index + 1}>
+        <th scope="Tabela-Row">{index + 1}</th>
+        <td>{pessoa.nome}</td>
+        <td>{pessoa.data}</td>
+        <td className="Tabela-Objetivo">{pessoa.objetivo}</td>
+        <td className="Tabela-Horario">{pessoa.horario}</td>
+        <td className="Tabela-Botoes">
+          <button className="c-success" onClick={() => navigate("/visualizarAluno")}>
+            Visualizar
+          </button>
+          <button
+            className="c-primary"
+            onClick={() => navigate("/editarAluno")}
+          >
+            Editar
+          </button>
+          <button className="c-warning" onClick={() => console.log("não")}>
+            Excluir
+          </button>
+        </td>
+      </tr>
+    );
+  }
 
-	return (
-		<table className="Tabela">
-			<thead>
-				<tr>
-					<th></th>
-					<th>Nome</th>
-					<th>Data de Matrícula</th>
-					<th>Objetivo</th>
-					<th>Horário</th>
-					<th className="Tabela-Botoes">Ações</th>
-				</tr>
-			</thead>
-			<tbody>{itens}</tbody>
-		</table>
-	);
+  return (
+    <div>
+      <header className="header">
+        <h1>Alunos </h1>
+		<button className="button-primary" onClick={() => navigate("/cadastro")}>Adicionar Aluno</button>
+      </header>
+
+      <table className="Tabela">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Nome</th>
+            <th>Data de Matrícula</th>
+            <th>Objetivo</th>
+            <th>Horário</th>
+            <th className="Tabela-Botoes">Ações</th>
+          </tr>
+        </thead>
+        <tbody>{itens}</tbody>
+      </table>
+    </div>
+  );
 }

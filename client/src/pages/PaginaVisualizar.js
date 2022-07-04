@@ -2,7 +2,7 @@ import "./PaginaVisualizar.css";
 
 // import { Box03 } from "../components/Box_03/Box03";
 // import { Box04 } from "../components/Box_04/Box04";
-import { Sidebar } from "../components/Sidebar";
+// import { Sidebar } from "../components/Sidebar";
 import { Navbar } from "../components/Navbar";
 import { CheckLogin } from "../App";
 import { useForm } from "react-hook-form";
@@ -14,10 +14,10 @@ export function PaginaVisualizar() {
       <div className="PaginaVisualizar">
         <Navbar></Navbar>
         <div className="Conteudo">
-          <Sidebar></Sidebar>
+          {/* <Sidebar></Sidebar> */}
           <div className="Area">
             <VisualizarAluno></VisualizarAluno>
-            <TabelaAvalicao></TabelaAvalicao>
+            <TabelaAvaliacao></TabelaAvaliacao>
 
             {/* <Box03></Box03> */}
             {/* <Box04></Box04> */}
@@ -30,6 +30,8 @@ export function PaginaVisualizar() {
 
 function VisualizarAluno() {
   const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
+  
   return (
     <form onSubmit={handleSubmit()} className="Visualizar">
       <header>
@@ -142,7 +144,7 @@ function VisualizarAluno() {
   );
 }
 
-function TabelaAvalicao() {
+export function TabelaAvaliacao() {
   const navigate = useNavigate();
 
   const lista = [
@@ -189,17 +191,23 @@ function TabelaAvalicao() {
   }
 
   return (
-    <table className="TabelaAvaliacao">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Avaliador</th>
-          <th>Data de avaliação</th>
-          <th>Tipo de avaliação</th>
-          <th className="Tabela-Botoes">Ações</th>
-        </tr>
-      </thead>
-      <tbody>{itens}</tbody>
-    </table>
+    <div className="container">
+      <header className="header">
+        <h1>Avaliações</h1>
+        <button className="button-primary" onClick={() => navigate("/novaAvaliacao")}>Nova Avaliação</button>
+      </header>
+      <table className="TabelaAvaliacao">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Avaliador</th>
+            <th>Data de avaliação</th>
+            <th>Tipo de avaliação</th>
+            <th className="Tabela-Botoes">Ações</th>
+          </tr>
+        </thead>
+        <tbody>{itens}</tbody>
+      </table>
+    </div>
   );
 }

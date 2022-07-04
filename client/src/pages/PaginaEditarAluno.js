@@ -1,11 +1,12 @@
 import "./PaginaEditarAluno.css";
-import { Sidebar } from "../components/Sidebar";
+// import { Sidebar } from "../components/Sidebar";
 import { Navbar } from "../components/Navbar";
 
 import { AuthContext, CheckLogin } from "../App";
 import { useForm } from "react-hook-form";
 import { axiosPostAluno } from "../api/Request";
 import { useContext } from "react";
+import { TabelaAvaliacao } from "./PaginaVisualizar";
 
 export function PaginaEditarAluno() {
   if (CheckLogin()) {
@@ -13,11 +14,10 @@ export function PaginaEditarAluno() {
       <div className="PaginaEditarAluno">
         <Navbar></Navbar>
         <div className="Conteudo">
-          <Sidebar></Sidebar>
+          {/* <Sidebar></Sidebar> */}
           <div className="Area">
             <EditarAluno></EditarAluno>
-            {/* <EditarAvaliacao></EditarAvaliacao> */}
-            {/* <Box08></Box08> nao vamos mexer nessa agoraaaa */}
+            <TabelaAvaliacao></TabelaAvaliacao>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import { Box05 } from "../components/Box_05/Box05";
+// import { Box05 } from "../components/Box_05/Box05";
 import { Navbar } from "../components/Navbar";
-import { Sidebar } from "../components/Sidebar";
+// import { Sidebar } from "../components/Sidebar";
 import "./PaginaNovaAvaliacao.css";
 
 export function PaginaNovaAvaliacao() {
@@ -9,9 +9,9 @@ export function PaginaNovaAvaliacao() {
       <Navbar></Navbar>
 
       <div className="conteudo">
-        <Sidebar></Sidebar>
+        {/* <Sidebar></Sidebar> */}
         <div className="boxavaliacao">
-          <Box05></Box05>
+          {/* <Box05></Box05> */}
         </div>
       </div>
     </div>

@@ -14,6 +14,16 @@
 	border-spacing: 0;
 }
 
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 16px;
+}
+
+.header button {
+	width: fit-content;
+}
+
 th,
 td {
 	width: auto;

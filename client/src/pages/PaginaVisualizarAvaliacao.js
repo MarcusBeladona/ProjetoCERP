@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { Navbar } from "../components/Navbar";
-import { Sidebar } from "../components/Sidebar";
+// import { Sidebar } from "../components/Sidebar";
 import "./PaginaVisualizarAvaliacao.css";
 
 export function PaginaVisualizarAvaliacao() {
@@ -8,7 +8,7 @@ export function PaginaVisualizarAvaliacao() {
     <div className="PaginaVisualizarAvaliacao">
       <Navbar></Navbar>
       <div className="Conteudo">
-        <Sidebar></Sidebar>
+        {/* <Sidebar></Sidebar> */}
         <div className="Area">
           <VisualizarAvaliacao></VisualizarAvaliacao>
           

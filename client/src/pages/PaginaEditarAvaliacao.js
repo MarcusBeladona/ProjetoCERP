@@ -1,7 +1,6 @@
-// import { Box08 } from "../components/Box_08/Box_08"
 import { useForm } from "react-hook-form";
 import { Navbar } from "../components/Navbar";
-import { Sidebar } from "../components/Sidebar";
+// import { Sidebar } from "../components/Sidebar";
 import "./PaginaEditarAvaliacao.css";
 
 export function PaginaEditarAvaliacao() {
@@ -9,10 +8,9 @@ export function PaginaEditarAvaliacao() {
     <div className="PaginaEditarAvaliacao">
       <Navbar></Navbar>
       <div className="Conteudo">
-        <Sidebar></Sidebar>
+        {/* <Sidebar></Sidebar> */}
         <div className="Area">
           <EditarAvaliacao></EditarAvaliacao>
-          {/* <Box08></Box08> */}
         </div>
       </div>
     </div>
