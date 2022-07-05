@@ -17,6 +17,7 @@ import { PaginaLogin } from "./pages/PaginaLogin";
 import "./styles/global.css";
 import "./styles/typos.css";
 import "./styles/colors.css";
+import "./styles/grid.css";
 import { PaginaNovoAdmin } from "./pages/PaginaNovoAdmin";
 
 // Contexto de utenticação

@@ -38,14 +38,18 @@ function EditarAluno() {
       .catch((e) => alert(e));
   }
 
+  // const { register, handleSubmit } = useForm();
+  // const navigate = useNavigate();
+
   return (
     <form onSubmit={handleSubmit(updateAluno)} className="EditarAluno">
       <header>
         <h1>Editar Aluno</h1>
       </header>
       <div className="Formulario">
-        <div className="DadosPessoais">
-          <article className="grid-nome">
+          <h3>Dados Pessoais</h3>
+        <div className="grid-2c">
+          <article>
             <label>Nome</label>
             <input
               {...register("nome")}
@@ -77,18 +81,11 @@ function EditarAluno() {
               defaultValue="999.999.999-22"
             ></input>
           </article>
-          <article>
-            <label>RG</label>
-            <input
-              {...register("rg")}
-              type="text"
-              defaultValue="2332212309"
-            ></input>
-          </article>
         </div>
 
-        <div className="DadosEndereco">
-          <article className="grid-rua">
+          <h3>Endereço</h3>
+        <div className="grid-3c">
+          <article>
             <label>Rua</label>
             <input
               {...register("rua")}
@@ -96,7 +93,15 @@ function EditarAluno() {
               defaultValue="Rua São Jão"
             />
           </article>
-          <article className="grid-bairro">
+          <article>
+            <label>Número</label>
+            <input
+              {...register("numero")}
+              type="text"
+              defaultValue="987"
+            ></input>
+          </article>
+          <article>
             <label>Bairro</label>
             <input
               {...register("bairro")}
@@ -104,20 +109,20 @@ function EditarAluno() {
               defaultValue="Centro"
             ></input>
           </article>
-          <article className="grid-cidade">
+          <article>
             <label>Cidade</label>
             <input
               {...register("cidade")}
               type="text"
-              defaultValue="Tabuleiro do Norte - CE"
+              defaultValue="Tabuleiro do Norte"
             ></input>
           </article>
           <article>
-            <label>Número</label>
+            <label>Estado</label>
             <input
-              {...register("numero")}
+              {...register("estado")}
               type="text"
-              defaultValue="987"
+              defaultValue="Ceará"
             ></input>
           </article>
           <article>
@@ -129,13 +134,43 @@ function EditarAluno() {
             ></input>
           </article>
         </div>
+            <h3>Matrícula</h3>
+          <div className="grid-3c">
+            <article>
+              <label>Data de Matrícula</label>
+              <input
+                {...register("dataMatricula")}
+                type="date"
+                defaultValue="2002-06-12"
+
+              ></input>
+            </article>
+            <article>
+              <label>Objetivo</label>
+              <input
+                {...register("objetivo")}
+                type="text"
+                defaultValue="Ganho de Massa"
+
+              ></input>
+            </article>
+            <article>
+              <label>Horário</label>
+              <input
+                {...register("horario")}
+                type="time"
+                defaultValue="18:00"
+
+              ></input>
+            </article>
+          </div>
       </div>
-      <footer>
+      {/* <footer>
         <button className="button-outlined">Voltar</button>
         <button type="submit" className="button-success">
           Salvar
         </button>
-      </footer>
+      </footer> */}
     </form>
   );
 }

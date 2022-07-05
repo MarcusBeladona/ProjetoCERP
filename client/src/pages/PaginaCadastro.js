@@ -30,8 +30,9 @@ function Cadastro() {
         <h1>Cadastrar aluno</h1>
       </header>
       <div className="Formulario">
-        <div className="DadosPessoais">
-          <article className="grid-nome">
+        <h3>Dados Pessoais</h3>
+        <div className="grid-2c">
+          <article>
             <label>Nome</label>
             <input {...register("nome")} type="text" />
           </article>
@@ -47,32 +48,49 @@ function Cadastro() {
             <label>CPF</label>
             <input {...register("cpf")} type="text"></input>
           </article>
-          <article>
-            <label>RG</label>
-            <input {...register("rg")} type="text"></input>
-          </article>
         </div>
 
-        <div className="DadosEndereco">
-          <article className="grid-rua">
+        <h3>Endereço</h3>
+        <div className="grid-3c">
+          <article>
             <label>Rua</label>
             <input {...register("rua")} type="text" />
-          </article>
-          <article className="grid-bairro">
-            <label>Bairro</label>
-            <input {...register("bairro")} type="text"></input>
-          </article>
-          <article className="grid-cidade">
-            <label>Cidade</label>
-            <input {...register("cidade")} type="text"></input>
           </article>
           <article>
             <label>Número</label>
             <input {...register("numero")} type="text"></input>
           </article>
           <article>
+            <label>Bairro</label>
+            <input {...register("bairro")} type="text"></input>
+          </article>
+          <article>
+            <label>Cidade</label>
+            <input {...register("cidade")} type="text"></input>
+          </article>
+          <article>
+            <label>Estado</label>
+            <input {...register("estado")} type="text"></input>
+          </article>
+          <article>
             <label>CEP</label>
             <input {...register("cep")} type="text"></input>
+          </article>
+        </div>
+
+        <h3>Matrícula</h3>
+        <div className="grid-3c">
+          <article>
+            <label>Data de Matrícula</label>
+            <input {...register("dataMatricula")} type="date"></input>
+          </article>
+          <article>
+            <label>Objetivo</label>
+            <input {...register("objetivo")} type="text"></input>
+          </article>
+          <article>
+            <label>Horário</label>
+            <input {...register("horario")} type="time"></input>
           </article>
         </div>
       </div>

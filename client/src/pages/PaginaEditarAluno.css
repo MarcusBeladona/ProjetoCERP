@@ -2,7 +2,6 @@
 	height: inherit;
 }
 
-
 .EditarAluno {
 	background-color: white;
 	border-radius: 8px;
@@ -26,74 +25,4 @@
 	align-self: flex-end;
 	display: flex;
 	gap: 16px;
-}
-
-.PaginaEditarAluno .DadosPessoais {
-	width: 100%;
-	display: grid;
-	gap: 16px;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-
- /* .PaginaEditarAluno .Formulario .Bioimpedancia,
- .PaginaEditarAluno .Formulario .Tronco,
- .PaginaEditarAluno .Formulario .MembrosSuperiores,
- .PaginaEditarAluno .Formulario .MembrosInferiores{
-	width: 100%;
-	display: grid;
-	gap: 16px;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-} */
-/* 
- .PaginaEditarAluno .Formulario .MembrosSuperiores,
- .PaginaEditarAluno .Formulario .MembrosInferiores{
-	width: 100%;
-	display: grid;
-	gap: 16px;
-	grid-template-columns: 1fr 1fr 1fr;
-} */
-
-.PaginaEditarAluno .DadosEndereco {
-	width: 100%;
-	display: grid;
-	gap: 16px;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.PaginaEditarAluno .DadosPessoais article,
-.PaginaEditarAluno .DadosEndereco article
-/* .PaginaEditarAluno .Bioimpedancia article,
-.PaginaEditarAluno .Tronco article,
-.PaginaEditarAluno .MembrosSuperiores article,
-.PaginaEditarAluno .MembrosInferiores article { */ {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 8px;
-	width: 1fr;
-}
-
-.PaginaEditarAluno .DadosPessoais article input,
-.PaginaEditarAluno .DadosEndereco article input
-/* .PaginaEditarAluno .Bioimpedancia article input,
-.PaginaEditarAluno .Tronco article input,
-.PaginaEditarAluno .MembrosSuperiores article input,
-.PaginaEditarAluno .MembrosInferiores article input { */{
-	width: 100%;
-}
-
-.PaginaEditarAluno .grid-nome {
-	grid-column: 1/3;
-}
-
-.PaginaEditarAluno .grid-rua {
-	grid-column: 1/3;
-}
-
-.PaginaEditarAluno .grid-bairro {
-	grid-column: 3/5;
-}
-
-.PaginaEditarAluno .grid-cidade {
-	grid-column: 1/3;
 }

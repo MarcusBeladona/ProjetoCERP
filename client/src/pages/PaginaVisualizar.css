@@ -2,11 +2,6 @@
 	height: inherit;
 }
 
-/* .PaginaVisualizar .EditarAvaliacao .Formulario h3 {
-	padding-bottom: 12px;
-	padding-top: 12px;
-} */
-
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -43,49 +38,6 @@
 	gap: 16px;
 }
 
-.PaginaVisualizar .DadosPessoais {
-	width: 100%;
-	display: grid;
-	gap: 16px;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-.PaginaVisualizar .DadosEndereco {
-	width: 100%;
-	display: grid;
-	gap: 16px;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.PaginaVisualizar .DadosPessoais article,
-.PaginaVisualizar .DadosEndereco article {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 8px;
-	width: 1fr;
-}
-
-.PaginaVisualizar .DadosPessoais article input,
-.PaginaVisualizar .DadosEndereco article input {
-	width: 100%;
-}
-
-.PaginaVisualizar .grid-nome {
-	grid-column: 1/3;
-}
-
-.PaginaVisualizar .grid-rua {
-	grid-column: 1/3;
-}
-
-.PaginaVisualizar .grid-bairro {
-	grid-column: 3/5;
-}
-
-.PaginaVisualizar .grid-cidade {
-	grid-column: 1/3;
-}
-
 .TabelaAvaliacao, .container {
 	background-color: white;
 	border-radius: 8px;
@@ -96,13 +48,13 @@
 	padding: 16px;
 }
 
-th,
+/* th,
 td {
 	width: auto;
 	height: auto;
 	padding: 16px;
 	align-items: center;
-}
+} */
 
 tr:hover {
 	background-color: #ebebeb;

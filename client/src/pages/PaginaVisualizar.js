@@ -31,15 +31,16 @@ export function PaginaVisualizar() {
 function VisualizarAluno() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-  
+
   return (
     <form onSubmit={handleSubmit()} className="Visualizar">
       <header>
         <h1>Visualizar Aluno</h1>
       </header>
       <div className="Formulario">
-        <div className="DadosPessoais">
-          <article className="grid-nome">
+      <h3>Dados Pessoais</h3>
+        <div className="grid-2c">
+          <article>
             <label>Nome</label>
             <input
               {...register("nome")}
@@ -75,19 +76,11 @@ function VisualizarAluno() {
               disabled
             ></input>
           </article>
-          <article>
-            <label>RG</label>
-            <input
-              {...register("rg")}
-              type="text"
-              defaultValue="2332212309"
-              disabled
-            ></input>
-          </article>
         </div>
 
-        <div className="DadosEndereco">
-          <article className="grid-rua">
+          <h3>Endereço</h3>
+        <div className="grid-3c">
+          <article>
             <label>Rua</label>
             <input
               {...register("rua")}
@@ -96,7 +89,16 @@ function VisualizarAluno() {
               disabled
             />
           </article>
-          <article className="grid-bairro">
+          <article>
+            <label>Número</label>
+            <input
+              {...register("numero")}
+              type="text"
+              defaultValue="987"
+              disabled
+            ></input>
+          </article>
+          <article>
             <label>Bairro</label>
             <input
               {...register("bairro")}
@@ -105,21 +107,21 @@ function VisualizarAluno() {
               disabled
             ></input>
           </article>
-          <article className="grid-cidade">
+          <article>
             <label>Cidade</label>
             <input
               {...register("cidade")}
               type="text"
-              defaultValue="Tabuleiro do Norte - CE"
+              defaultValue="Tabuleiro do Norte"
               disabled
             ></input>
           </article>
           <article>
-            <label>Número</label>
+            <label>Estado</label>
             <input
-              {...register("numero")}
+              {...register("estado")}
               type="text"
-              defaultValue="987"
+              defaultValue="Ceará"
               disabled
             ></input>
           </article>
@@ -133,6 +135,36 @@ function VisualizarAluno() {
             ></input>
           </article>
         </div>
+            <h3>Matrícula</h3>
+          <div className="grid-3c">
+            <article>
+              <label>Data de Matrícula</label>
+              <input
+                {...register("dataMatricula")}
+                type="date"
+                defaultValue="2002-06-12"
+                disabled
+              ></input>
+            </article>
+            <article>
+              <label>Objetivo</label>
+              <input
+                {...register("objetivo")}
+                type="text"
+                defaultValue="Ganho de Massa"
+                disabled
+              ></input>
+            </article>
+            <article>
+              <label>Horário</label>
+              <input
+                {...register("horario")}
+                type="time"
+                defaultValue="18:00"
+                disabled
+              ></input>
+            </article>
+          </div>
       </div>
       {/* <footer>
         <button className="button-outlined">Voltar</button>
@@ -194,7 +226,12 @@ export function TabelaAvaliacao() {
     <div className="container">
       <header className="header">
         <h1>Avaliações</h1>
-        <button className="button-primary" onClick={() => navigate("/novaAvaliacao")}>Nova Avaliação</button>
+        <button
+          className="button-primary"
+          onClick={() => navigate("/novaAvaliacao")}
+        >
+          Nova Avaliação
+        </button>
       </header>
       <table className="TabelaAvaliacao">
         <thead>
