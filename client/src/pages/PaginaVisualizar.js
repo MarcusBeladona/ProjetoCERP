@@ -30,7 +30,7 @@ export function PaginaVisualizar() {
 
 function VisualizarAluno() {
   const { register, handleSubmit } = useForm();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <form onSubmit={handleSubmit()} className="Visualizar">

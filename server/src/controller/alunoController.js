@@ -5,15 +5,20 @@ postAluno = (req, res) => {
 	alunoModel
 		.create({
 			nome: req.body.nome,
-			cep: req.body.cep,
-			bairro: req.body.bairro,
-			cidade: req.body.cidade,
+			nascimento: req.body.nascimento,
 			telefone: req.body.telefone,
 			cpf: req.body.cpf,
-			nascimento: req.body.nascimento,
-			numero: req.body.numero,
+
 			rua: req.body.rua,
-			rg: req.body.rg,
+			numero: req.body.numero,
+			bairro: req.body.bairro,
+			cidade: req.body.cidade,
+			estado: req.body.estado,
+			cep: req.body.cep,
+			
+			dataMatricula: req.body.dataMatricula,
+			objetivo: req.body.objetivo,
+			horario: req.body.horario
 		})
 		.then(a => res.json(alunoView.render(a)))
 		.catch(e => res.status(500).send(e));

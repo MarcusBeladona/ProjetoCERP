@@ -3,6 +3,9 @@ import { Navbar } from "../components/Navbar";
 // import { Sidebar } from "../components/Sidebar";
 // import { Box02 } from "../components/Box_02/Box02";
 import { useForm } from "react-hook-form";
+import { axiosPostAluno } from "../api/Request";
+import { useContext } from "react";
+import { AuthContext } from "../App";
 // import { AuthContext } from "../App";
 // import { useContext } from "react";
 
@@ -22,10 +25,19 @@ export function PaginaCadastro() {
 
 function Cadastro() {
   const { register, handleSubmit } = useForm();
-  // const token = useContext(AuthContext).tokenBody.token;
+  const token = useContext(AuthContext).tokenBody.token;
+
+  function cadastrarAluno(data) {
+    console.log(data);
+    axiosPostAluno(token, data)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((e) => console.log(e));
+  }
 
   return (
-    <form onSubmit={handleSubmit()} className="Cadastro">
+    <form onSubmit={handleSubmit(cadastrarAluno)} className="Cadastro">
       <header>
         <h1>Cadastrar aluno</h1>
       </header>

@@ -13,6 +13,15 @@ const alunoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  telefone: {
+    type: Number,
+    required: true,
+  },
+
+  cpf: {
+    type: Number,
+    required: true,
+  },
 
   // Endereço
   rua: {
@@ -20,10 +29,6 @@ const alunoSchema = new mongoose.Schema({
     required: true,
   },
   numero: {
-    type: Number,
-    required: true,
-  },
-  cep: {
     type: Number,
     required: true,
   },
@@ -39,14 +44,11 @@ const alunoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  telefone: {
+  cep: {
     type: Number,
     required: true,
   },
-  cpf: {
-    type: Number,
-    required: true,
-  },
+
 
   // Matrícula
   dataMatricula: {
@@ -59,8 +61,8 @@ const alunoSchema = new mongoose.Schema({
   },
   horario: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 });
 
 module.exports = mongoose.model("aluno", alunoSchema);
