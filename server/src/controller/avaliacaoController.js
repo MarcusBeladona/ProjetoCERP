@@ -4,26 +4,33 @@ const avaliacaoView = require("../view/avaliacaoView");
 postAvaliacao = (req, res) => {
   avaliacaoModel
     .create({
-      aluno: req.body.aluno,
+      // aluno: req.body.aluno,
+      peso: req.body.peso,
+      altura: req.body.altura,
+      imc: req.body.imc,
+      gorduraCorporal: req.body.gorduraCorporal,
+      idadeCorporal: req.body.idadeCorporal,
+      gorduraVisceral: req.body.gorduraVisceral,
+      musculo: req.body.musculo,
+
       torax: req.body.torax,
       cintura: req.body.cintura,
       abdomen: req.body.abdomen,
       quadril: req.body.quadril,
-      cinturao_escapular: req.body.cinturao_escapular,
+      cinturaoEscapular: req.body.cinturaoEscapular,
       pescoco: req.body.pescoco,
+
       punho: req.body.punho,
       antebraco: req.body.antebraco,
-      braco_relaxado: req.body.braco_relaxado,
-      braco_contraido: req.body.braco_contraido,
+      bracoRelaxado: req.body.bracoRelaxado,
+      bracoContraido: req.body.bracoContraido,
       envergadura: req.body.envergadura,
-      quadriceps_proximal: req.body.quadriceps_proximal,
-      quadriceps_medial: req.body.quadriceps_medial,
-      quadriceps_distal: req.body.quadriceps_distal,
+
+      quadricepsProximal: req.body.quadricepsProximal,
+      quadricepsMedial: req.body.quadricepsMedial,
+      quadricepsDistal: req.body.quadricepsDistal,
       panturrilha: req.body.panturrilha,
       tornozelo: req.body.tornozelo,
-      peso: req.body.peso,
-      altura: req.body.altura,
-      imc: req.body.imc,
     })
     .then((a) => res.json(avaliacaoView.render(a)))
     .catch((e) => res.status(500).send(e));
@@ -57,5 +64,5 @@ module.exports = {
   postAvaliacao,
   listarAvaliacoes,
   putEditAvaliacao,
-  deleteAvaliacao
+  deleteAvaliacao,
 };

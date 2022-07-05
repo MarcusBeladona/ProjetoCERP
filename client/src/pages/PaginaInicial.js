@@ -36,13 +36,7 @@ function Tabela() {
       data: "10/07/2022",
       objetivo: "Musculação",
       horario: "18:00",
-    },
-    {
-      nome: "Lady Gaga",
-      data: "28/02/2022",
-      objetivo: "Musculação",
-      horario: "16:30",
-    },
+    }
   ];
 
   const itens = [];

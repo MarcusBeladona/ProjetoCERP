@@ -1,28 +1,29 @@
-.pagina-v{
-    display: block;
-    background-color: #F3F3F3;
+.PaginaNovaAvaliacao {
+	height: inherit;
 }
 
 
-.pagina-v .conteudo{
-    display: flex;
-	height: 100vh;
-	width: 100vw;
-    
+.NovaAvaliacao {
+	background-color: white;
+	border-radius: 8px;
+	padding: 16px;
+	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
 }
 
-.pagina-v .conteudo .boox-v{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-
+.NovaAvaliacao .Formulario {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
 }
 
-.pagina-v .conteudo .boxavaliacao{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+.NovaAvaliacao footer {
+	align-self: flex-end;
+	display: flex;
+	gap: 16px;
 }
-

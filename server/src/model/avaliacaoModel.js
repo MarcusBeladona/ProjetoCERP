@@ -8,6 +8,36 @@ const avaliacaoSchema = new mongoose.Schema({
 		type: mongoose.Schema.ObjectId,
 		ref: "Aluno",
 	},
+	// Bioimpedância
+	peso: {
+		type: Number,
+		required: true,
+	},
+	altura: {
+		type: Number,
+		required: true,
+	},
+	imc: {
+		type: Number,
+		required: true,
+	},
+	gorduraCorporal: {
+		type: Number,
+		required: true,
+	},
+	idadeCorporal: {
+		type: Number,
+		required: true,
+	},
+	gorduraVisceral: {
+		type: Number,
+		required: true,
+	},
+	musculo: {
+		type: Number,
+		required: true,
+	},
+	// Tronco
 	torax: {
 		type: Number,
 		required: true,
@@ -24,7 +54,7 @@ const avaliacaoSchema = new mongoose.Schema({
 		type: Number,
 		required: true,
 	},
-	cinturao_escapular: {
+	cinturaoEscapular: {
 		type: Number,
 		required: true,
 	},
@@ -32,6 +62,8 @@ const avaliacaoSchema = new mongoose.Schema({
 		type: Number,
 		required: true,
 	},
+
+	// Membros superiores
 	punho: {
 		type: Number,
 		required: true,
@@ -40,11 +72,11 @@ const avaliacaoSchema = new mongoose.Schema({
 		type: Number,
 		required: true,
 	},
-	braco_relaxado: {
+	bracoRelaxado: {
 		type: Number,
 		required: true,
 	},
-	braco_contraido: {
+	bracoContraido: {
 		type: Number,
 		required: true,
 	},
@@ -52,16 +84,17 @@ const avaliacaoSchema = new mongoose.Schema({
 		type: Number,
 		required: true,
 	},
-	quadriceps_proximal: {
+
+	// Membros inferiores
+	quadricepsProximal: {
 		type: Number,
 		required: true,
 	},
-	quadriceps_medial: {
+	quadricepsMedial: {
 		type: Number,
 		required: true,
 	},
-	quadriceps_distal: {
-		//boto quadriceps_distal ou quadricepsDistal? vale pros outros que são duas palavras tbm
+	quadricepsDistal: {
 		type: Number,
 		required: true,
 	},
@@ -72,20 +105,7 @@ const avaliacaoSchema = new mongoose.Schema({
 	tornozelo: {
 		type: Number,
 		required: true,
-	},
-	peso: {
-		type: Number,
-		required: true,
-	},
-	altura: {
-		type: Number,
-		required: true,
-	},
-	imc: {
-		// talvez o imc não precise de entrada, a gente mostra ele na tela como um cálculo simples
-		type: Number,
-		required: false,
-	},
+	}
 });
 
 module.exports = mongoose.model("avaliacao", avaliacaoSchema);
