@@ -71,7 +71,7 @@ function routes() {
 			<Route path="/cadastro" element={<PaginaCadastro></PaginaCadastro>}></Route>
 			<Route path="/login" element={<PaginaLogin></PaginaLogin>}></Route>
 			<Route path="/novoAdmin" element={<PaginaNovoAdmin></PaginaNovoAdmin>}></Route>
-			<Route path="/visualizarAluno" element={<PaginaVisualizar></PaginaVisualizar>}></Route>
+			<Route path="/visualizarAluno/:id" element={<PaginaVisualizar></PaginaVisualizar>}></Route>
 			<Route path="/visualizarAvaliacao" element={<PaginaVisualizarAvaliacao></PaginaVisualizarAvaliacao>}></Route>
 			<Route path="/editarAluno" element={<PaginaEditarAluno></PaginaEditarAluno>}></Route>
 			<Route path="/editarAvaliacao" element={<PaginaEditarAvaliacao></PaginaEditarAvaliacao>}></Route>

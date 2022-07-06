@@ -15,12 +15,12 @@ postAluno = (req, res) => {
 			cidade: req.body.cidade,
 			estado: req.body.estado,
 			cep: req.body.cep,
-			
+
 			dataMatricula: req.body.dataMatricula,
 			objetivo: req.body.objetivo,
-			horario: req.body.horario
+			horario: req.body.horario,
 		})
-		.then(a => res.json(alunoView.render(a)))
+		.then(a => res.json(a))
 		.catch(e => res.status(500).send(e));
 };
 
@@ -28,7 +28,7 @@ getAlunoById = (req, res) => {
 	alunoModel
 		.findById(req.params.id)
 		.exec()
-		.then(a => res.status(200).json(alunoView.render(a)))
+		.then(a => res.status(200).json(a))
 		.catch(e => res.status(404).send(e));
 };
 
@@ -36,7 +36,7 @@ getAlunos = (req, res) => {
 	alunoModel
 		.find()
 		.exec()
-		.then(a => res.status(200).json(alunoView.renderAll(a)))
+		.then(a => res.status(200).json(a))
 		.catch(e => res.status(500).send(e));
 };
 
@@ -44,7 +44,7 @@ putEditAluno = (req, res) => {
 	alunoModel
 		.findByIdAndUpdate(req.params.id, req.body, { new: true })
 		.exec()
-		.then(a => res.status(200).json(alunoView.render(a)))
+		.then(a => res.status(200).json(a))
 		.catch(e => res.status(404).send(e));
 };
 

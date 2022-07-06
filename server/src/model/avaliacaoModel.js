@@ -4,9 +4,19 @@ const avaliacaoSchema = new mongoose.Schema({
 	id: {
 		type: mongoose.Schema.Types.ObjectId,
 	},
-	aluno: {
+	alunoId: {
 		type: mongoose.Schema.ObjectId,
-		ref: "Aluno",
+		ref: "aluno",
+		required: true,
+	},
+	avaliadorId: {
+		type: mongoose.Schema.ObjectId,
+		ref: "admin",
+		required: true,
+	},
+	dataAvaliacao: {
+		type: String,
+		required: true,
 	},
 	// Bioimpedância
 	peso: {
@@ -105,7 +115,7 @@ const avaliacaoSchema = new mongoose.Schema({
 	tornozelo: {
 		type: Number,
 		required: true,
-	}
+	},
 });
 
 module.exports = mongoose.model("avaliacao", avaliacaoSchema);
