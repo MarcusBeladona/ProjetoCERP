@@ -24,60 +24,83 @@ import { PaginaNovoAdmin } from "./pages/PaginaNovoAdmin";
 export const AuthContext = createContext(null);
 
 export function CheckLogin() {
-	const navigate = useNavigate();
-	useEffect(() => {
-		tryLogin();
-	});
+  const navigate = useNavigate();
+  useEffect(() => {
+    tryLogin();
+  });
 
-	function tryLogin() {
-		if (localStorage.getItem("token") === "null") {
-			alert("É necessário entrar na sua conta.");
-			navigate("/login");
-		}
-	}
+  function tryLogin() {
+    if (localStorage.getItem("token") === "null") {
+      alert("É necessário entrar na sua conta.");
+      navigate("/login");
+    }
+  }
 
-	return true;
+  return true;
 }
 
 function App() {
-	//Puxando token do localStorage, se primeira vez ele define "null"
-	const [tokenBody, setToken] = useState({
-		token: localStorage.getItem("token"),
-		nome: localStorage.getItem("nome"),
-	});
+  //Puxando token do localStorage, se primeira vez ele define "null"
+  const [tokenBody, setToken] = useState({
+    token: localStorage.getItem("token"),
+    nome: localStorage.getItem("nome"),
+  });
 
-	//Função paralela que passa o estado do token para o localStorage antes.
-	function setLocalToken(token) {
-		localStorage.setItem("nome", token.nome);
-		localStorage.setItem("token", token.token);
-		setToken(token);
-	}
+  //Função paralela que passa o estado do token para o localStorage antes.
+  function setLocalToken(token) {
+    localStorage.setItem("nome", token.nome);
+    localStorage.setItem("token", token.token);
+    setToken(token);
+  }
 
-	//Adicionar BrowserRoutes e NavLinks pra conseguir mudar as páginas aqui:
-	return (
-		<div className="App">
-			<AuthContext.Provider value={{ tokenBody: tokenBody, setToken: setLocalToken }}>
-				<BrowserRouter>{routes()}</BrowserRouter>
-			</AuthContext.Provider>
-		</div>
-	);
+  //Adicionar BrowserRoutes e NavLinks pra conseguir mudar as páginas aqui:
+  return (
+    <div className="App">
+      <AuthContext.Provider
+        value={{ tokenBody: tokenBody, setToken: setLocalToken }}
+      >
+        <BrowserRouter>{routes()}</BrowserRouter>
+      </AuthContext.Provider>
+    </div>
+  );
 }
 
 // Todas as rotas da aplicação:
 function routes() {
-	return (
-		<Routes>
-			<Route path="/" element={<PaginaInicial></PaginaInicial>}></Route>
-			<Route path="/cadastro" element={<PaginaCadastro></PaginaCadastro>}></Route>
-			<Route path="/login" element={<PaginaLogin></PaginaLogin>}></Route>
-			<Route path="/novoAdmin" element={<PaginaNovoAdmin></PaginaNovoAdmin>}></Route>
-			<Route path="/visualizarAluno/:id" element={<PaginaVisualizar></PaginaVisualizar>}></Route>
-			<Route path="/visualizarAvaliacao" element={<PaginaVisualizarAvaliacao></PaginaVisualizarAvaliacao>}></Route>
-			<Route path="/editarAluno" element={<PaginaEditarAluno></PaginaEditarAluno>}></Route>
-			<Route path="/editarAvaliacao" element={<PaginaEditarAvaliacao></PaginaEditarAvaliacao>}></Route>
-			<Route path="/novaAvaliacao" element={<PaginaNovaAvaliacao></PaginaNovaAvaliacao>}></Route>
-		</Routes>
-	);
+  return (
+    <Routes>
+      <Route path="/" element={<PaginaInicial></PaginaInicial>}></Route>
+      <Route
+        path="/cadastro"
+        element={<PaginaCadastro></PaginaCadastro>}
+      ></Route>
+      <Route path="/login" element={<PaginaLogin></PaginaLogin>}></Route>
+      <Route
+        path="/novoAdmin"
+        element={<PaginaNovoAdmin></PaginaNovoAdmin>}
+      ></Route>
+      <Route
+        path="/visualizarAluno/:id"
+        element={<PaginaVisualizar></PaginaVisualizar>}
+      ></Route>
+      <Route
+        path="/visualizarAvaliacao/:id"
+        element={<PaginaVisualizarAvaliacao></PaginaVisualizarAvaliacao>}
+      ></Route>
+      <Route
+        path="/editarAluno/:id"
+        element={<PaginaEditarAluno></PaginaEditarAluno>}
+      ></Route>
+      <Route
+        path="/editarAvaliacao"
+        element={<PaginaEditarAvaliacao></PaginaEditarAvaliacao>}
+      ></Route>
+      <Route
+        path="/novaAvaliacao"
+        element={<PaginaNovaAvaliacao></PaginaNovaAvaliacao>}
+      ></Route>
+    </Routes>
+  );
 }
 
 export default App;

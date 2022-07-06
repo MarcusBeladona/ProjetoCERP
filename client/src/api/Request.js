@@ -20,6 +20,9 @@ export function axiosPutAluno(token, dados) {
 	return axios({
 		method: "PUT",
 		url: "http://localhost:3010/alunos",
+		headers: {
+			token: token,
+		},
 		data: dados,
 	});
 }
@@ -70,6 +73,16 @@ export function axiosGetAvaliacoes(token, alunoId) {
 	return axios({
 		method: "GET",
 		url: "http://localhost:3010/avaliacao/" + alunoId,
+		headers: {
+			token: token,
+		},
+	});
+}
+
+export function axiosGetAlunoByIdAndDelete(token, id) {
+	return axios({
+		method: "DELETE",
+		url: "http://localhost:3010/alunos/" + id,
 		headers: {
 			token: token,
 		},

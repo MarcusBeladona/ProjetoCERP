@@ -11,7 +11,6 @@ export function PaginaVisualizarAvaliacao() {
         {/* <Sidebar></Sidebar> */}
         <div className="Area">
           <VisualizarAvaliacao></VisualizarAvaliacao>
-          
         </div>
       </div>
     </div>
@@ -40,18 +39,29 @@ function VisualizarAvaliacao() {
           </article>
           <article className="grid-altura">
             <label>Altura</label>
-            <input {...register("altura")} type="text" defaultValue="1.65cm" disabled/>
+            <input
+              {...register("altura")}
+              type="text"
+              defaultValue="1.65cm"
+              disabled
+            />
           </article>
           <article>
             <label>IMC</label>
-            <input {...register("imc")} type="text" defaultValue="21.5"disabled></input>
+            <input
+              {...register("imc")}
+              type="text"
+              defaultValue="21.5"
+              disabled
+            ></input>
           </article>
           <article>
             <label>Gordura corporal</label>
             <input
               {...register("gordura-corporal")}
               type="text"
-              defaultValue="23%" disabled
+              defaultValue="23%"
+              disabled
             ></input>
           </article>
           <article>
@@ -59,7 +69,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("idade-corporal")}
               type="text"
-              defaultValue="8" disabled
+              defaultValue="8"
+              disabled
             ></input>
           </article>
           <article>
@@ -67,7 +78,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("gordura-visceral")}
               type="text"
-              defaultValue="20%" disabled
+              defaultValue="20%"
+              disabled
             ></input>
           </article>
           <article>
@@ -75,7 +87,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("musculo")}
               type="text"
-              defaultValue="31%" disabled
+              defaultValue="31%"
+              disabled
             ></input>
           </article>
         </div>
@@ -83,18 +96,29 @@ function VisualizarAvaliacao() {
         <div className="Tronco">
           <article className="grid-torax">
             <label>Torax</label>
-            <input {...register("torax")} type="text" defaultValue="34cm" disabled/>
+            <input
+              {...register("torax")}
+              type="text"
+              defaultValue="34cm"
+              disabled
+            />
           </article>
           <article className="grid-cintura">
             <label>Cintura</label>
-            <input {...register("cintura")} type="text" defaultValue="30cm" disabled/>
+            <input
+              {...register("cintura")}
+              type="text"
+              defaultValue="30cm"
+              disabled
+            />
           </article>
           <article>
             <label>Abdômen</label>
             <input
               {...register("abdomen")}
               type="text"
-              defaultValue="34%" disabled
+              defaultValue="34%"
+              disabled
             ></input>
           </article>
           <article>
@@ -102,7 +126,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("quadril")}
               type="text"
-              defaultValue="40cm" disabled
+              defaultValue="40cm"
+              disabled
             ></input>
           </article>
           <article>
@@ -110,7 +135,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("cinturao-escapular")}
               type="text"
-              defaultValue="20cm" disabled
+              defaultValue="20cm"
+              disabled
             ></input>
           </article>
           <article>
@@ -118,7 +144,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("pescoco")}
               type="text"
-              defaultValue="23cm" disabled
+              defaultValue="23cm"
+              disabled
             ></input>
           </article>
         </div>
@@ -127,18 +154,29 @@ function VisualizarAvaliacao() {
         <div className="MembrosSuperiores">
           <article className="grid-punho">
             <label>Punho</label>
-            <input {...register("punho")} type="text" defaultValue="10cm" disabled/>
+            <input
+              {...register("punho")}
+              type="text"
+              defaultValue="10cm"
+              disabled
+            />
           </article>
           <article className="grid-antebraco">
             <label>Antebraço</label>
-            <input {...register("antebraco")} type="text" defaultValue="20cm"disabled />
+            <input
+              {...register("antebraco")}
+              type="text"
+              defaultValue="20cm"
+              disabled
+            />
           </article>
           <article>
             <label>Braço relaxado</label>
             <input
               {...register("braco-relaxado")}
               type="text"
-              defaultValue="28cm" disabled
+              defaultValue="28cm"
+              disabled
             ></input>
           </article>
           <article>
@@ -146,7 +184,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("braco-contraido")}
               type="text"
-              defaultValue="30cm" disabled
+              defaultValue="30cm"
+              disabled
             ></input>
           </article>
           <article>
@@ -154,7 +193,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("envergadura")}
               type="text"
-              defaultValue="20cm" disabled
+              defaultValue="20cm"
+              disabled
             ></input>
           </article>
         </div>
@@ -166,7 +206,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("quadriceps-proximal")}
               type="text"
-              defaultValue="49cm" disabled
+              defaultValue="49cm"
+              disabled
             />
           </article>
           <article className="grid-quadriceps-medial">
@@ -174,7 +215,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("quadriceps-medial")}
               type="text"
-              defaultValue="45cm" disabled
+              defaultValue="45cm"
+              disabled
             />
           </article>
           <article>
@@ -182,7 +224,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("quadriceps distal")}
               type="text"
-              defaultValue="40cm" disabled
+              defaultValue="40cm"
+              disabled
             ></input>
           </article>
           <article>
@@ -190,7 +233,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("panturrilha")}
               type="text"
-              defaultValue="27cm" disabled
+              defaultValue="27cm"
+              disabled
             ></input>
           </article>
           <article>
@@ -198,7 +242,8 @@ function VisualizarAvaliacao() {
             <input
               {...register("tornozelo")}
               type="text"
-              defaultValue="19cm" disabled
+              defaultValue="19cm"
+              disabled
             ></input>
           </article>
         </div>

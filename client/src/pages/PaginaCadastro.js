@@ -31,9 +31,12 @@ function Cadastro() {
     console.log(data);
     axiosPostAluno(token, data)
       .then((res) => {
-        console.log(res);
+        alert("Aluno adicionado com sucesso.");
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        alert("Confira se todos os campos foram preenchidos corretamente.");
+        console.log(e);
+      });
   }
 
   return (
