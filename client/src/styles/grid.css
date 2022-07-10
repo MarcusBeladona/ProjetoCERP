@@ -1,19 +1,18 @@
-
-.grid-2c{
+.grid-2c {
 	width: 100%;
 	display: grid;
 	gap: 16px;
 	grid-template-columns: 1fr 1fr;
 }
 
-.grid-3c{
+.grid-3c {
 	width: 100%;
 	display: grid;
 	gap: 16px;
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid-4c{
+.grid-4c {
 	width: 100%;
 	display: grid;
 	gap: 16px;
@@ -23,7 +22,7 @@
 .grid-2c article,
 .grid-3c article,
 .grid-4c article {
-    display: flex;
+	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 8px;
@@ -33,21 +32,6 @@
 .grid-2c article input,
 .grid-3c article input,
 .grid-4c article input {
-    width: 100%;
-    height: 44px;
+	width: 100%;
+	height: 44px;
 }
-
-
-
-
-/* .grid-nome {
-	grid-column: 1/2;
-}
-
-.grid-rua {
-	grid-column: 1/2;
-}
-
-.grid-matricula {
-	grid-column: 1/2;
-} */

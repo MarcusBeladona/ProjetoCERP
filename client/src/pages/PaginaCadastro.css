@@ -2,7 +2,6 @@
 	height: inherit;
 }
 
-
 .Cadastro {
 	background-color: white;
 	border-radius: 8px;
@@ -14,16 +13,19 @@
 	gap: 16px;
 }
 
+.Cadastro header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
 .Cadastro .Formulario {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 16px;
-}
-
-.Cadastro footer {
-	align-self: flex-end;
-	display: flex;
 	gap: 16px;
 }

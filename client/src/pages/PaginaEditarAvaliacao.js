@@ -1,208 +1,176 @@
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
+import { axiosGetAvaliacaoById, axiosPutAvaliacao } from "../api/Request";
+import { AuthContext } from "../App";
 import { Navbar } from "../components/Navbar";
-// import { Sidebar } from "../components/Sidebar";
 import "./PaginaEditarAvaliacao.css";
 
 export function PaginaEditarAvaliacao() {
-  return (
-    <div className="PaginaEditarAvaliacao">
-      <Navbar></Navbar>
-      <div className="Conteudo">
-        {/* <Sidebar></Sidebar> */}
-        <div className="Area">
-          <EditarAvaliacao></EditarAvaliacao>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className="PaginaEditarAvaliacao">
+			<Navbar></Navbar>
+			<div className="Conteudo">
+				<div className="Area">
+					<EditarAvaliacao></EditarAvaliacao>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 function EditarAvaliacao() {
-  const { register, handleSubmit } = useForm();
+	const { register, handleSubmit } = useForm();
+	const { id } = useParams();
+	const token = useContext(AuthContext).tokenBody.token;
+	const navigate = useNavigate();
+	const [avaliacao, setAvaliacao] = useState("");
 
-  return (
-    <form onSubmit={handleSubmit()} className="EditarAvaliacao">
-      <header>
-        <h1>Editar Avaliação</h1>
-      </header>
-      <div className="Formulario">
-        <h3>Bioimpedância</h3>
-        <div className="Bioimpedancia">
-          <article className="grid-peso">
-            <label>Peso</label>
-            <input {...register("peso")} type="text" defaultValue="56kg" />
-          </article>
-          <article className="grid-altura">
-            <label>Altura</label>
-            <input {...register("altura")} type="text" defaultValue="1.65cm" />
-          </article>
-          <article>
-            <label>IMC</label>
-            <input {...register("imc")} type="text" defaultValue="21.5"></input>
-          </article>
-          <article>
-            <label>Gordura corporal</label>
-            <input
-              {...register("gordura-corporal")}
-              type="text"
-              defaultValue="23%"
-            ></input>
-          </article>
-          <article>
-            <label>Idade corporal</label>
-            <input
-              {...register("idade-corporal")}
-              type="text"
-              defaultValue="8"
-            ></input>
-          </article>
-          <article>
-            <label>Gordura Visceral</label>
-            <input
-              {...register("gordura-visceral")}
-              type="text"
-              defaultValue="20%"
-            ></input>
-          </article>
-          <article>
-            <label>Músculo</label>
-            <input
-              {...register("musculo")}
-              type="text"
-              defaultValue="31%"
-            ></input>
-          </article>
-        </div>
-        <h3>Tronco</h3>
-        <div className="Tronco">
-          <article className="grid-torax">
-            <label>Torax</label>
-            <input {...register("torax")} type="text" defaultValue="34cm" />
-          </article>
-          <article className="grid-cintura">
-            <label>Cintura</label>
-            <input {...register("cintura")} type="text" defaultValue="30cm" />
-          </article>
-          <article>
-            <label>Abdômen</label>
-            <input
-              {...register("abdomen")}
-              type="text"
-              defaultValue="34%"
-            ></input>
-          </article>
-          <article>
-            <label>Quadril</label>
-            <input
-              {...register("quadril")}
-              type="text"
-              defaultValue="40cm"
-            ></input>
-          </article>
-          <article>
-            <label>Cinturão escapular</label>
-            <input
-              {...register("cinturao-escapular")}
-              type="text"
-              defaultValue="20cm"
-            ></input>
-          </article>
-          <article>
-            <label>Pescoço</label>
-            <input
-              {...register("pescoco")}
-              type="text"
-              defaultValue="23cm"
-            ></input>
-          </article>
-        </div>
+	function updateAvaliacao(data) {
+		Object.keys(data).forEach(key => {
+			if (data[key] === "") {
+				delete data[key];
+			}
+		});
 
-        <h3>Membros superiores</h3>
-        <div className="MembrosSuperiores">
-          <article className="grid-punho">
-            <label>Punho</label>
-            <input {...register("punho")} type="text" defaultValue="10cm" />
-          </article>
-          <article className="grid-antebraco">
-            <label>Antebraço</label>
-            <input {...register("antebraco")} type="text" defaultValue="20cm" />
-          </article>
-          <article>
-            <label>Braço relaxado</label>
-            <input
-              {...register("braco-relaxado")}
-              type="text"
-              defaultValue="28cm"
-            ></input>
-          </article>
-          <article>
-            <label>Braço contraído</label>
-            <input
-              {...register("braco-contraido")}
-              type="text"
-              defaultValue="30cm"
-            ></input>
-          </article>
-          <article>
-            <label>Envergadura</label>
-            <input
-              {...register("envergadura")}
-              type="text"
-              defaultValue="20cm"
-            ></input>
-          </article>
-        </div>
+		axiosPutAvaliacao(token, id, data)
+			.then(res => {
+				alert("Avaliação atualizada com sucesso.");
+				navigate("/visualizarAluno/" + res.data.alunoId);
+			})
+			.catch(e => {
+				console.log(e);
+				alert("Erro ao atualizar avaliação, tente novamente.");
+			});
+	}
 
-        <h3>Membros inferiores</h3>
-        <div className="MembrosInferiores">
-          <article className="grid-quadriceps-proximal">
-            <label>Quadríceps proximal</label>
-            <input
-              {...register("quadriceps-proximal")}
-              type="text"
-              defaultValue="49cm"
-            />
-          </article>
-          <article className="grid-quadriceps-medial">
-            <label>Quadríceps medial</label>
-            <input
-              {...register("quadriceps-medial")}
-              type="text"
-              defaultValue="45cm"
-            />
-          </article>
-          <article>
-            <label>Quadríceps distal</label>
-            <input
-              {...register("quadriceps distal")}
-              type="text"
-              defaultValue="40cm"
-            ></input>
-          </article>
-          <article>
-            <label>Panturrilha</label>
-            <input
-              {...register("panturrilha")}
-              type="text"
-              defaultValue="27cm"
-            ></input>
-          </article>
-          <article>
-            <label>Tornozelo</label>
-            <input
-              {...register("tornozelo")}
-              type="text"
-              defaultValue="19cm"
-            ></input>
-          </article>
-        </div>
-      </div>
-      <footer>
-        <button className="button-outlined">Voltar</button>
-        <button type="submit" className="button-success">
-          Salvar
-        </button>
-      </footer>
-    </form>
-  );
+	useEffect(() => {
+		axiosGetAvaliacaoById(token, id)
+			.then(res => {
+				setAvaliacao(res.data);
+			})
+			.catch(err => {
+				console.log(err);
+				alert("Erro ao carregar avaliação, tente novamente.");
+			});
+	}, [id, token]);
+
+	return (
+		<form onSubmit={handleSubmit(updateAvaliacao)} className="EditarAvaliacao">
+			<header>
+				<h1>Editar Avaliação</h1>
+				<button type="submit" className="button-success">
+					Salvar
+				</button>
+			</header>
+			<div className="Formulario">
+				<h3>Bioimpedância</h3>
+				<div className="grid-4c">
+					<article>
+						<label>Peso</label>
+						<input {...register("peso")} type="text" defaultValue={avaliacao.peso} />
+					</article>
+					<article>
+						<label>Altura</label>
+						<input {...register("altura")} type="text" defaultValue={avaliacao.altura} />
+					</article>
+					<article>
+						<label>IMC</label>
+						<input {...register("imc")} type="text" defaultValue={avaliacao.imc}></input>
+					</article>
+					<article>
+						<label>Gordura corporal</label>
+						<input {...register("gorduraCorporal")} type="text" defaultValue={avaliacao.gorduraCorporal}></input>
+					</article>
+					<article>
+						<label>Idade corporal</label>
+						<input {...register("idadeCorporal")} type="text" defaultValue={avaliacao.idadeCorporal}></input>
+					</article>
+					<article>
+						<label>Gordura Visceral</label>
+						<input {...register("gorduraVisceral")} type="text" defaultValue={avaliacao.gorduraVisceral}></input>
+					</article>
+					<article>
+						<label>Músculo</label>
+						<input {...register("musculo")} type="text" defaultValue={avaliacao.musculo}></input>
+					</article>
+				</div>
+				<h3>Tronco</h3>
+				<div className="grid-3c">
+					<article className="">
+						<label>Torax</label>
+						<input {...register("torax")} type="text" defaultValue={avaliacao.torax} />
+					</article>
+					<article className="">
+						<label>Cintura</label>
+						<input {...register("cintura")} type="text" defaultValue={avaliacao.cintura} />
+					</article>
+					<article>
+						<label>Abdômen</label>
+						<input {...register("abdomen")} type="text" defaultValue={avaliacao.abdomen}></input>
+					</article>
+					<article>
+						<label>Quadril</label>
+						<input {...register("quadril")} type="text" defaultValue={avaliacao.quadril}></input>
+					</article>
+					<article>
+						<label>Cinturão escapular</label>
+						<input {...register("cinturaoEscapular")} type="text" defaultValue={avaliacao.cinturaoEscapular}></input>
+					</article>
+					<article>
+						<label>Pescoço</label>
+						<input {...register("pescoco")} type="text" defaultValue={avaliacao.pescoco}></input>
+					</article>
+				</div>
+
+				<h3>Membros superiores</h3>
+				<div className="grid-3c">
+					<article>
+						<label>Punho</label>
+						<input {...register("punho")} type="text" defaultValue={avaliacao.punho} />
+					</article>
+					<article>
+						<label>Antebraço</label>
+						<input {...register("antebraco")} type="text" defaultValue={avaliacao.antebraco} />
+					</article>
+					<article>
+						<label>Braço relaxado</label>
+						<input {...register("bracoRelaxado")} type="text" defaultValue={avaliacao.bracoRelaxado}></input>
+					</article>
+					<article>
+						<label>Braço contraído</label>
+						<input {...register("bracoContraido")} type="text" defaultValue={avaliacao.bracoContraido}></input>
+					</article>
+					<article>
+						<label>Envergadura</label>
+						<input {...register("envergadura")} type="text" defaultValue={avaliacao.envergadura}></input>
+					</article>
+				</div>
+
+				<h3>Membros inferiores</h3>
+				<div className="grid-3c">
+					<article>
+						<label>Quadríceps proximal</label>
+						<input {...register("quadricepsProximal")} type="text" defaultValue={avaliacao.quadricepsProximal} />
+					</article>
+					<article>
+						<label>Quadríceps medial</label>
+						<input {...register("quadricepsMedial")} type="text" defaultValue={avaliacao.quadricepsMedial} />
+					</article>
+					<article>
+						<label>Quadríceps distal</label>
+						<input {...register("quadricepsDistal")} type="text" defaultValue={avaliacao.quadricepsDistal}></input>
+					</article>
+					<article>
+						<label>Panturrilha</label>
+						<input {...register("panturrilha")} type="text" defaultValue={avaliacao.panturrilha}></input>
+					</article>
+					<article>
+						<label>Tornozelo</label>
+						<input {...register("tornozelo")} type="text" defaultValue={avaliacao.tornozelo}></input>
+					</article>
+				</div>
+			</div>
+		</form>
+	);
 }

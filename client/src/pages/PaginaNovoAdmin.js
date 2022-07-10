@@ -12,16 +12,19 @@ export function PaginaNovoAdmin() {
 	const user = useContext(AuthContext);
 	const navigate = useNavigate();
 
-	function enviarDados(dados) { // dados = { nome, email, senha }
+	function enviarDados(dados) {
+		// dados = { nome, email, senha }
 		axiosPostAdmin(dados)
-			.then(res => { // res = { token, nome }
+			.then(res => {
+				// res = { token, nome }
 				console.log(res);
 				axiosSign({ email: res.data.email, senha: dados.senha }) // Comparando ambas as entradas, res e dados
 					.then(res => {
-						user.setToken({ token: res.data.token, nome: res.data.nome });
+						user.setToken({ token: res.data.token, nome: res.data.nome, id: res.data.id });
 						navigate("/");
 					})
-					.catch(e => { // Isso nunca deveria acontecer
+					.catch(e => {
+						// Isso nunca deveria acontecer
 						alert("Administrador cadastrado, porém erro ao fazer login. Tente logar manualmente.");
 						navigate("/login");
 					});

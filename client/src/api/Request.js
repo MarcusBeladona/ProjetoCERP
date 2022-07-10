@@ -16,17 +16,6 @@ export function axiosPostAdmin(dados) {
 	});
 }
 
-export function axiosPutAluno(token, dados) {
-	return axios({
-		method: "PUT",
-		url: "http://localhost:3010/alunos",
-		headers: {
-			token: token,
-		},
-		data: dados,
-	});
-}
-
 export function axiosPostAluno(token, dados) {
 	return axios({
 		method: "POST",
@@ -69,10 +58,10 @@ export function axiosGetAlunoById(token, id) {
 	});
 }
 
-export function axiosGetAvaliacoes(token, alunoId) {
+export function axiosGetAvaliacoes(token, id) {
 	return axios({
 		method: "GET",
-		url: "http://localhost:3010/avaliacao/" + alunoId,
+		url: "http://localhost:3010/alunos/" + id + "/avaliacoes",
 		headers: {
 			token: token,
 		},
@@ -86,5 +75,47 @@ export function axiosGetAlunoByIdAndDelete(token, id) {
 		headers: {
 			token: token,
 		},
+	});
+}
+
+export function axiosGetAvaliacaoById(token, id) {
+	return axios({
+		method: "GET",
+		url: "http://localhost:3010/avaliacao/" + id,
+		headers: {
+			token: token,
+		},
+	});
+}
+
+export function axiosGetAvaliacaoByIdAndDelete(token, id) {
+	return axios({
+		method: "DELETE",
+		url: "http://localhost:3010/avaliacao/" + id,
+		headers: {
+			token: token,
+		},
+	});
+}
+
+export function axiosPutAluno(token, id, dados) {
+	return axios({
+		method: "PUT",
+		url: "http://localhost:3010/alunos/" + id,
+		headers: {
+			token: token,
+		},
+		data: dados,
+	});
+}
+
+export function axiosPutAvaliacao(token, id, dados) {
+	return axios({
+		method: "PUT",
+		url: "http://localhost:3010/avaliacao/" + id,
+		headers: {
+			token: token,
+		},
+		data: dados,
 	});
 }

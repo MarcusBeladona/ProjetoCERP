@@ -1,0 +1,48 @@
+.PaginaImprimirAvaliacao {
+	height: inherit;
+}
+
+.PaginaImprimirAvaliacao .ImprimirAvaliacao .Formulario h3 {
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+
+.ImprimirAvaliacao {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+}
+
+.ImprimirAvaliacao .sectionCard {
+	background-color: white;
+	border-radius: 8px;
+	padding: 16px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.ImprimirAvaliacao .Formulario {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+}
+
+@media print {
+	.ImprimirAvaliacao .sectionCard {
+		page-break-before: left;
+		padding: 0px;
+	}
+	.ImprimirAvaliacao {
+		display: inherit;
+		padding: 0px;
+	}
+	.PaginaImprimirAvaliacao .ImprimirAvaliacao .Formulario h3 {
+		padding-bottom: 0px;
+		padding-top: 0px;
+	}
+}

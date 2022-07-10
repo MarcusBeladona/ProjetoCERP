@@ -15,7 +15,7 @@ export function PaginaLogin() {
 	function enviarDados(dados) {
 		axiosSign(dados)
 			.then(res => {
-				user.setToken({ token: res.data.token, nome: res.data.nome });
+				user.setToken({ token: res.data.token, nome: res.data.nome, id: res.data.id });
 				navigate("/");
 			})
 			.catch(e => alert("Erro ao fazer login."));

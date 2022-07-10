@@ -5,6 +5,7 @@ postAvaliacao = (req, res) => {
 	avaliacaoModel
 		.create({
 			alunoId: req.body.alunoId,
+			avaliadorId: req.body.avaliadorId,
 			dataAvaliacao: req.body.dataAvaliacao,
 			// aluno: req.body.aluno,
 			peso: req.body.peso,
@@ -48,6 +49,16 @@ listarAvaliacoes = (req, res) => {
 		.catch(e => res.status(404).send(e));
 };
 
+getAvaliacaoById = (req, res) => {
+	avaliacaoModel
+		.findById(req.params.id)
+		.populate("alunoId")
+		.populate("avaliadorId", "-senha")
+		.exec()
+		.then(a => res.status(200).json(a))
+		.catch(e => res.status(404).send(e));
+};
+
 putEditAvaliacao = (req, res) => {
 	avaliacaoModel
 		.findByIdAndUpdate(req.params.id, req.body, { new: true })
@@ -67,6 +78,7 @@ deleteAvaliacao = (req, res) => {
 module.exports = {
 	postAvaliacao,
 	listarAvaliacoes,
+	getAvaliacaoById,
 	putEditAvaliacao,
 	deleteAvaliacao,
 };

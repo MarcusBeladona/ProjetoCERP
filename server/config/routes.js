@@ -27,6 +27,9 @@ router.delete("/alunos/:id", alunoController.deleteAluno);
 
 // Avaliacao
 router.post("/avaliacao", avaliacaoController.postAvaliacao);
-router.get("/avaliacao/:id", avaliacaoController.listarAvaliacoes);
+router.put("/avaliacao/:id", avaliacaoController.putEditAvaliacao);
+router.get("/alunos/:id/avaliacoes", avaliacaoController.listarAvaliacoes);
+router.get("/avaliacao/:id", avaliacaoController.getAvaliacaoById);
+router.delete("/avaliacao/:id", avaliacaoController.deleteAvaliacao);
 
 module.exports = router;

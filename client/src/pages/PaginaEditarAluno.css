@@ -13,16 +13,19 @@
 	gap: 16px;
 }
 
+.EditarAluno header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
 .EditarAluno .Formulario {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 16px;
-}
-
-.EditarAluno footer {
-	align-self: flex-end;
-	display: flex;
 	gap: 16px;
 }
