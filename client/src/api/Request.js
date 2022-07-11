@@ -3,7 +3,7 @@ import axios from "axios";
 export function axiosSign(dados) {
 	return axios({
 		method: "POST",
-		url: "http://localhost:3010/admins/signin",
+		url: "https://back-projeto-cerp.herokuapp.com/admins/signin",
 		data: dados,
 	});
 }
@@ -11,7 +11,7 @@ export function axiosSign(dados) {
 export function axiosPostAdmin(dados) {
 	return axios({
 		method: "POST",
-		url: "http://localhost:3010/admins",
+		url: "https://back-projeto-cerp.herokuapp.com/admins",
 		data: dados,
 	});
 }
@@ -19,7 +19,7 @@ export function axiosPostAdmin(dados) {
 export function axiosPostAluno(token, dados) {
 	return axios({
 		method: "POST",
-		url: "http://localhost:3010/alunos",
+		url: "https://back-projeto-cerp.herokuapp.com/alunos",
 		headers: {
 			token: token,
 		},
@@ -30,7 +30,7 @@ export function axiosPostAluno(token, dados) {
 export function axiosPostAvaliacao(token, dados) {
 	return axios({
 		method: "POST",
-		url: "http://localhost:3010/avaliacao",
+		url: "https://back-projeto-cerp.herokuapp.com/avaliacao",
 		headers: {
 			token: token,
 		},
@@ -41,7 +41,7 @@ export function axiosPostAvaliacao(token, dados) {
 export function axiosGetAlunos(token) {
 	return axios({
 		method: "GET",
-		url: "http://localhost:3010/alunos",
+		url: "https://back-projeto-cerp.herokuapp.com/alunos",
 		headers: {
 			token: token,
 		},
@@ -51,7 +51,7 @@ export function axiosGetAlunos(token) {
 export function axiosGetAlunoById(token, id) {
 	return axios({
 		method: "GET",
-		url: "http://localhost:3010/alunos/" + id,
+		url: "https://back-projeto-cerp.herokuapp.com/alunos/" + id,
 		headers: {
 			token: token,
 		},
@@ -61,7 +61,7 @@ export function axiosGetAlunoById(token, id) {
 export function axiosGetAvaliacoes(token, id) {
 	return axios({
 		method: "GET",
-		url: "http://localhost:3010/alunos/" + id + "/avaliacoes",
+		url: "https://back-projeto-cerp.herokuapp.com/alunos/" + id + "/avaliacoes",
 		headers: {
 			token: token,
 		},
@@ -71,7 +71,7 @@ export function axiosGetAvaliacoes(token, id) {
 export function axiosGetAlunoByIdAndDelete(token, id) {
 	return axios({
 		method: "DELETE",
-		url: "http://localhost:3010/alunos/" + id,
+		url: "https://back-projeto-cerp.herokuapp.com/alunos/" + id,
 		headers: {
 			token: token,
 		},
@@ -81,7 +81,7 @@ export function axiosGetAlunoByIdAndDelete(token, id) {
 export function axiosGetAvaliacaoById(token, id) {
 	return axios({
 		method: "GET",
-		url: "http://localhost:3010/avaliacao/" + id,
+		url: "https://back-projeto-cerp.herokuapp.com/avaliacao/" + id,
 		headers: {
 			token: token,
 		},
@@ -91,7 +91,7 @@ export function axiosGetAvaliacaoById(token, id) {
 export function axiosGetAvaliacaoByIdAndDelete(token, id) {
 	return axios({
 		method: "DELETE",
-		url: "http://localhost:3010/avaliacao/" + id,
+		url: "https://back-projeto-cerp.herokuapp.com/avaliacao/" + id,
 		headers: {
 			token: token,
 		},
@@ -101,7 +101,7 @@ export function axiosGetAvaliacaoByIdAndDelete(token, id) {
 export function axiosPutAluno(token, id, dados) {
 	return axios({
 		method: "PUT",
-		url: "http://localhost:3010/alunos/" + id,
+		url: "https://back-projeto-cerp.herokuapp.com/alunos/" + id,
 		headers: {
 			token: token,
 		},
@@ -112,7 +112,7 @@ export function axiosPutAluno(token, id, dados) {
 export function axiosPutAvaliacao(token, id, dados) {
 	return axios({
 		method: "PUT",
-		url: "http://localhost:3010/avaliacao/" + id,
+		url: "https://back-projeto-cerp.herokuapp.com/avaliacao/" + id,
 		headers: {
 			token: token,
 		},
