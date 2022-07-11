@@ -6,115 +6,89 @@ const avaliacaoSchema = new mongoose.Schema({
 	},
 	alunoId: {
 		type: mongoose.Schema.ObjectId,
-		ref: "aluno",
-		required: true,
+		ref: "aluno"
 	},
 	avaliadorId: {
 		type: mongoose.Schema.ObjectId,
-		ref: "admin",
-		required: true,
+		ref: "admin"
 	},
 	dataAvaliacao: {
-		type: String,
-		required: true,
+		type: String
 	},
 	// Bioimpedância
 	peso: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	altura: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	imc: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	gorduraCorporal: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	idadeCorporal: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	gorduraVisceral: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	musculo: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	// Tronco
 	torax: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	cintura: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	abdomen: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	quadril: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	cinturaoEscapular: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	pescoco: {
-		type: Number,
-		required: true,
+		type: String
 	},
 
 	// Membros superiores
 	punho: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	antebraco: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	bracoRelaxado: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	bracoContraido: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	envergadura: {
-		type: Number,
-		required: true,
+		type: String
 	},
 
 	// Membros inferiores
 	quadricepsProximal: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	quadricepsMedial: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	quadricepsDistal: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	panturrilha: {
-		type: Number,
-		required: true,
+		type: String
 	},
 	tornozelo: {
-		type: Number,
-		required: true,
+		type: String
 	},
 });
 

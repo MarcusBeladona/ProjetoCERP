@@ -48,13 +48,18 @@
 	padding: 16px;
 }
 
-/* th,
+th,
 td {
-	width: auto;
+	width: 100%;
 	height: auto;
 	padding: 16px;
 	align-items: center;
-} */
+	/* border: solid red 1px; */
+}
+
+.Tabela-Avaliador {
+	width: 30%;
+}
 
 tr:hover {
 	background-color: #ebebeb;
@@ -64,11 +69,12 @@ tr:nth-child(even) {
 	background-color: #fcfcfc;
 }
 
-.Tabela-Botoes {
+/* .Tabela-Botoes {
 	display: flex;
 	gap: 16px;
 	justify-content: center;
-}
+	width: fit-content;
+} */
 
 .body-tabela .inicio-tabela .tipo .card-tipo {
 	box-sizing: border-box;

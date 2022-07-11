@@ -156,9 +156,9 @@ export function TabelaAvaliacao() {
 		itens.push(
 			<tr key={index + 1}>
 				<th scope="Tabela-Row">{index + 1}</th>
-				<td>{avaliacao.avaliadorId.nome}</td>
+				<td className="Tabela-Avaliador">{avaliacao.avaliadorId.nome}</td>
 				<td>{data}</td>
-				<td className="Tabela-Tipo">{avaliacao.tipo}</td>
+				{/* <td className="Tabela-Tipo">{avaliacao.tipo}</td> */}
 				<td className="Tabela-Botoes">
 					<button className="c-success" onClick={() => navigate("/visualizarAvaliacao/" + avaliacao._id)}>
 						Visualizar
