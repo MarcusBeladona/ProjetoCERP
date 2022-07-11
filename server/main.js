@@ -3,7 +3,7 @@ const db = require("./config/mongoose");
 
 // Express
 app.listen(process.env.PORT || 3010, function () {
-	console.log("Express online: localhost:3010");
+	console.log("Express online: %d -> %s.", this.address().port, app.settings.env);
 });
 
 // MongoDB
